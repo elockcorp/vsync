@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "حذف برنامه نیاز به دست�
 StrCpy $UAC_ERROR_LOGON_SERVICE "سرویس ورود اجرا نیست، درحال لغو نصب!"
 StrCpy $INIT_UNINSTALLER_RUNNING "حذف کننده از قبل در حال اجراست."
 StrCpy $SectionGroup_Shortcuts "میانبرها"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "لطفا طاق به جلوگیری از فساد داده را قفل کنید. مجدد را کلیک کنید وقتی که شما انجام داده اند."

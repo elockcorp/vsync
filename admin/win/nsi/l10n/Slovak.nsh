@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Tento odinötal·tor vyûaduje admin prÌstup
 StrCpy $UAC_ERROR_LOGON_SERVICE "Prihlasovacia sluûba nebeûÌ! Preruöuje sa."
 StrCpy $INIT_UNINSTALLER_RUNNING "Odinötal·tor je uû spusten˝."
 StrCpy $SectionGroup_Shortcuts "Z·stupcovia"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "ProsÌm trezorov˝m z·mkom, aby sa zabr·nilo poökodeniu d·t. Kliknite na tlaËidlo Opakovaù, ak ste neurobili."

@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "El desinstalador requiere acceso administ
 StrCpy $UAC_ERROR_LOGON_SERVICE "Servicio Inicio de sesión no se está ejecutando, abortando!"
 StrCpy $INIT_UNINSTALLER_RUNNING "El desinstalador ya se encuentra en ejecución."
 StrCpy $SectionGroup_Shortcuts "Accesos directos"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Por favor, bloquear bóveda para evitar la corrupción de datos. Haga clic en Reintentar cuando lo ha hecho."

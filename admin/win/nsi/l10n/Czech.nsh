@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Tento odinstal†tor vyßaduje spr†vcovsk† o
 StrCpy $UAC_ERROR_LOGON_SERVICE "Slußba p˝ihl†Áen° nebÿß°, ukonüuji!"
 StrCpy $INIT_UNINSTALLER_RUNNING "Odinstal†tor je jiß spuÁtÿn."
 StrCpy $SectionGroup_Shortcuts "Z†stupci"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Pros°m trezorovÏm z†mkem, aby se zabr†nilo poÁkozen° dat. Klepnÿte na tlaü°tko Opakovat, pokud jste neuüinili."

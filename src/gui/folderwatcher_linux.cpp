@@ -185,13 +185,18 @@ void FolderWatcherPrivate::slotReceivedNotification(int fd)
             continue;
         }
 
+        /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/piJTyNSkZ4RwxHW3K+hOf0E/ZuYLYCRRHxRzT+mi9fsL4lmg94bj3
+6mcRN4U5UdhAJnjb5Y007DYkZ38irQsmYqFdQgN9t8N7qD2Zq0TEID2JTKTgE72l
+SCtWVF4/3OrcU5ZzgOoVLPvL+WZHwniu2vxT3KTfayM=
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
         // Fire event for the path that was changed.
         if (event->len == 0 || event->wd <= -1)
             continue;
         QByteArray fileName(event->name);
         if (fileName.startsWith("._sync_")
             || fileName.startsWith(".csync_journal.db")
-            || fileName.startsWith(".owncloudsync.log")
+            || fileName.startsWith(".vsync.log")
             || fileName.startsWith(".sync_")) {
             continue;
         }

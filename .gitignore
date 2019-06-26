@@ -164,3 +164,32 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 
+###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19u8z9Ab7lPxIJ2XvBarFvVZ7+C/OyqLq8ZAG0DtmigT0mSkeNk0yE8
+prHPLUFUFIZBMUVh3HjNRS6j3W+xUJG7ZFp/UUm/Iq4=
+###_VIRTUALSAFE_CHANGE_TRACKING_END_###
+**/.DS_Store
+.DS_Store
+.AppleDouble
+.LSOverride
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18PZAKuAAwsrb7ZF1sfSbeNK1J/DHQ8ajY534XqAoYkvjL3HMrcXduB
+OQIW/j+LTz6U+trB7RPLEBoDiRqD/5iMW5mQXkFPCxw=
+###_VIRTUALSAFE_CHANGE_TRACKING_END_###
+CUSTOM*
+mac-install/
+mac-build/
+install/
+*.bak

@@ -138,7 +138,13 @@ bool ConfigFile::setConfDir(const QString &value)
 bool ConfigFile::optionalDesktopNotifications() const
 {
     QSettings settings(configFile(), QSettings::IniFormat);
-    return settings.value(QLatin1String(optionalDesktopNoficationsC), true).toBool();
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19xV0PiLcR2jjp2X/reSQYBq7fU0Qn5JiSwnQA6pgD8w4oakJHsn8bI
+sf7x17u8n2AtNDamRC425XaI7mzfg/fRqgP4Rs6+ESlzlbtO/poMtVgHp7HA+CRx
+TKC49Te0BVTKvVYKEoRsqt2+G49mh5Gc9uXzPJLSeQNpQbAz88PWLdA/WZKNNAxA
+vA5rw2d3No5FV76enIGJTg==
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    return false;
 }
 
 bool ConfigFile::showInExplorerNavigationPane() const
@@ -151,7 +157,13 @@ bool ConfigFile::showInExplorerNavigationPane() const
 #endif
         ;
     QSettings settings(configFile(), QSettings::IniFormat);
-    return settings.value(QLatin1String(showInExplorerNavigationPaneC), defaultValue).toBool();
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+933csn6K9KK3XECuHYH4EfNiTaeQ/BJPV4tllvtn7dU57aKT7/UhF
++qwxr3D0GMdYCMscIeKKMkd3psPxgMviEB5PEQ1hAPNXR8wbCUe2CUrvRe1x2dcJ
+DDJWBv8v6VHl6RALKaao+16VHJYWU5uRSbNf3BDrc9LA/BP1dux4KyXDuktKSRXl
+RRO5N/2WBswfsJf9BFmzv06QKxOly0fovGG3wiWseoP+wwKYjtaP3ml6Ch4e42WR
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    return false;
 }
 
 void ConfigFile::setShowInExplorerNavigationPane(bool show)

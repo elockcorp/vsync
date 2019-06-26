@@ -95,7 +95,12 @@ ActivityWidget::ActivityWidget(QWidget *parent)
 
     connect(_model, &QAbstractItemModel::rowsInserted, this, &ActivityWidget::rowsInserted);
 
-    connect(_ui->_activityList, &QListView::activated, this, &ActivityWidget::slotOpenFile);
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+7OtcQHFCVqJ/0CkQNHiAGWvs3wJpt08KLq9e3rqPVd72U8c+5o4C/
+7W0/XSnKwXnDtPUUA5TAkU/MIFRudYpO2y88jfxIV6uK4QMyEscv2WaPvqxZAtgF
+jjMIVAJAVyZuGpAmnqIGLR2MmJz6KsxzJCFTA0i4yW8=
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    //connect(_ui->_activityList, &QListView::activated, this, &ActivityWidget::slotOpenFile);
 
     connect(&_removeTimer, &QTimer::timeout, this, &ActivityWidget::slotCheckToCleanWidgets);
     _removeTimer.setInterval(1000);

@@ -167,7 +167,12 @@ static CSYNC_EXCLUDE_TYPE _csync_excluded_common(const char *path, bool excludeC
             match = CSYNC_FILE_SILENTLY_EXCLUDED;
             goto out;
         }
-        rc = csync_fnmatch(".owncloudsync.log*", bname, 0);
+        /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18ChrEMpa++XoBwuDIcWz5LzGAuOUpEex5ozvTcUo/TGhK4YWY+E43B
+SzfnYO1xOFSK33ZDAckRGkaVjCT2e5ORb5eDS/xM9q08Pts2Zckms3QgQvW1VIyr
+nus/AN3f7Nj1tbr8k+K5+nooEOldjYRZ0n/OQQnyCnc=
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+        rc = csync_fnmatch(".vsync.log*", bname, 0);
         if (rc == 0) {
             match = CSYNC_FILE_SILENTLY_EXCLUDED;
             goto out;

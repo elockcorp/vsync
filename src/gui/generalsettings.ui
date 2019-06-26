@@ -20,8 +20,12 @@
       <string>General Settings</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
+      <!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/yprhnG1gd1nfNZzxYolEWvdZNXd3sGAyDIJcYQHfSS9HWYqHPhYfj
+d8qiPlBBMmQKMt3Oekb/L1Jt/aFOYI9+3GqRwhFNJSc=
+      ###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
       <item row="0" column="0">
-       <widget class="QCheckBox" name="autostartCheckBox">
+       <!--widget class="QCheckBox" name="autostartCheckBox">
         <property name="text">
          <string>&amp;Launch on System Startup</string>
         </property>
@@ -34,7 +38,7 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
+      <item row="1" column="0"-->
        <widget class="QCheckBox" name="monoIconsCheckBox">
         <property name="toolTip">
          <string>For System Tray</string>
@@ -196,7 +200,12 @@
             <cursorShape>ArrowCursor</cursorShape>
            </property>
            <property name="text">
-            <string notr="true">Copyright ownCloud GmbH</string>
+            <!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/Vmb9a0l0zDfrfawhyPHKrw3uKFAuy066zdOjI3aooOrLFgxYpujgz
+kpCrGw2+cEqeiyroJAvFCcopEsEXsz09XeJeL59Q1EwqAQEwetMets3Dg2VNTNJp
+JN/Iy2E37HdAvOsIfwvMXckSEq/uy6vSW0WBhBFxi/0=
+            ###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
+            <string notr="true">www.virtualsafe.cloud</string>
            </property>
            <property name="textInteractionFlags">
             <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
@@ -222,6 +231,11 @@
      </layout>
     </widget>
    </item>
+   <!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX185lBDSAeSuTn1O3Tu0b3ZWhKcHeDyKmtcG1OB993wRZo9Ia36bplwb
+jn0QmdcCYm3ioPQRjrVduNDpzuWR6jb1+z6F4oU6tjURg3lagABU+/vtZ55gIbqn
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
+   <!--
    <item row="1" column="0">
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
@@ -338,6 +352,7 @@
      </layout>
     </widget>
    </item>
+   -->
    <item row="5" column="0">
     <spacer name="verticalSpacer">
      <property name="orientation">

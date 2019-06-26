@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Ce désinstallateur requiert les droits a
 StrCpy $UAC_ERROR_LOGON_SERVICE "Service de logon non lancé ! Abandon."
 StrCpy $INIT_UNINSTALLER_RUNNING "Une désinstallation est déjà en cours."
 StrCpy $SectionGroup_Shortcuts "Raccourcis"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "S'il vous plaît verrouiller la voûte pour prévenir la corruption de données. Cliquez sur Réessayer lorsque vous avez fait."

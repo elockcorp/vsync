@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "See desinstallija vajab admini ligipääsu,
 StrCpy $UAC_ERROR_LOGON_SERVICE "Sisselogimisteenus ei tööta, katkestamine!"
 StrCpy $INIT_UNINSTALLER_RUNNING "See desinstallija on juba käimas."
 StrCpy $SectionGroup_Shortcuts "Otseteed"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Palun lukustada Vault, et vältida andmete korruptsioon. Vajuta uuesti, kui olete seda teinud."

@@ -286,9 +286,15 @@ void ownCloudGui::slotComputeOverallSyncStatus()
     // If the sync succeeded but there are unresolved conflicts,
     // show the problem icon!
     auto iconStatus = overallStatus;
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19UZL3No/Gg56w61y1KOgISs7ZcSYFysLo51rYAnlbEo8j7L415ibMF
+9k5WngAse8jw+uoEIQklNfgkbjAeuDGMetHA0CB2efvU3hihWx1TwcIVcTql8fT2
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     if (iconStatus == SyncResult::Success && hasUnresolvedConflicts) {
         iconStatus = SyncResult::Problem;
     }
+    */
 
     // If we don't get a status for whatever reason, that's a Problem
     if (iconStatus == SyncResult::Undefined) {
@@ -635,6 +641,11 @@ void ownCloudGui::updateContextMenu()
         }
     }
 
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19jPkKaHGBNVtQ+I8mWNynAbEfGeqZqx2LTANRuy0llLvzIDbN5TbKr
+MaHOsHOhGZ2qRNUZLNIEjA==
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     if (accountList.count() > 1) {
         foreach (AccountStatePtr account, accountList) {
             QMenu *accountMenu = new QMenu(account->account()->displayName(), _contextMenu.data());
@@ -648,18 +659,33 @@ void ownCloudGui::updateContextMenu()
     }
 
     _contextMenu->addSeparator();
-
+    */
     _contextMenu->addAction(_actionStatus);
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+Ss2sXF6shyePxF6bHqGxlhCCUooE2mpBB99ac3XTVWqTKsMKynrTI
+3ipjmROUMTELpVUmK4rXmA==
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     if (isConfigured && atLeastOneConnected) {
         _contextMenu->addMenu(_recentActionsMenu);
     }
-
+    */
     _contextMenu->addSeparator();
-
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/6vkmVbzzX4uja+jf17xYLQswx03MWNsbhsVtbxWlsoVtQGwgyiBq5
+oHIQZC5ZriBgBTNxdhL7OA==
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     if (accountList.isEmpty()) {
         _contextMenu->addAction(_actionNewAccountWizard);
     }
+    */
     _contextMenu->addAction(_actionSettings);
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+TxTwnVRd8KmhcHzPPBK7n6dMNznpryfgUHYres6s0JONJD9m9jn+t
+yMjCQgp02s1hM929RwPN+g==
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     if (!Theme::instance()->helpUrl().isEmpty()) {
         _contextMenu->addAction(_actionHelp);
     }
@@ -672,6 +698,7 @@ void ownCloudGui::updateContextMenu()
     }
 
     _contextMenu->addSeparator();
+    */
     if (atLeastOnePaused) {
         QString text;
         if (accountList.count() > 1) {
@@ -692,6 +719,11 @@ void ownCloudGui::updateContextMenu()
         QAction *action = _contextMenu->addAction(text);
         connect(action, &QAction::triggered, this, &ownCloudGui::slotPauseAllFolders);
     }
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19NHVjba/dZDvIJVXFad2NfYmkucyQgcoXu7lL/TjbA+Dt3wx1zHsQp
+P36xuFbhOb0r4bMwp1Ci7Q==
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     if (atLeastOneSignedIn) {
         if (accountList.count() > 1) {
             _actionLogout->setText(tr("Log out of all accounts"));
@@ -713,7 +745,7 @@ void ownCloudGui::updateContextMenu()
         _contextMenu->addSeparator();
         _contextMenu->addAction(_actionAbout);
     }
-
+    */
     _contextMenu->addAction(_actionQuit);
 
     if (_workaroundShowAndHideTray) {
@@ -1176,10 +1208,16 @@ void ownCloudGui::slotAbout()
     msgBox->setTextInteractionFlags(Qt::TextBrowserInteraction);
     msgBox->setInformativeText("<qt>"+about+"</qt>");
     msgBox->setStandardButtons(QMessageBox::Ok);
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/iynrSiAWOWKugdAeQ3SbgF6GYDHWN6LbOQ3hXU+81tDUqBHNKDyGC
+5zJQGpnh4WpRA9NQJWtcUpW692upOxOvW1i5UTvA1xc=
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     QIcon appIcon = Theme::instance()->applicationIcon();
     // Assume icon is always small enough to fit an about dialog?
     qDebug() << appIcon.availableSizes().last();
     msgBox->setIconPixmap(appIcon.pixmap(appIcon.availableSizes().last()));
+    */
     msgBox->show();
 }
 

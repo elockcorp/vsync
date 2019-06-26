@@ -5,6 +5,10 @@
 	<key>PACKAGES</key>
 	<array>
 		<dict>
+			<key>MUST-CLOSE-APPLICATION-ITEMS</key>
+			<array/>
+			<key>MUST-CLOSE-APPLICATIONS</key>
+			<false/>
 			<key>PACKAGE_FILES</key>
 			<dict>
 				<key>DEFAULT_INSTALL_LOCATION</key>
@@ -18,33 +22,82 @@
 							<array>
 								<dict>
 									<key>CHILDREN</key>
-									<array/>
+									<array>
+										<!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+yugFxXaAyMra+/w0kxHT0hHDjJ5Nm4QdhSpfX2LITJE8lzikwraqB
+fA6PFetckV6iskuYd3kDNwg8y3KmC8I6HRds/PGNl00=
+										###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
+										<dict>
+											<key>CHILDREN</key>
+											<array/>
+											<key>GID</key>
+											<integer>80</integer>
+											<key>PATH</key>
+											<string>VirtualSAFE.app</string>
+											<key>PATH_TYPE</key>
+											<integer>3</integer>
+											<key>PERMISSIONS</key>
+											<integer>493</integer>
+											<key>TYPE</key>
+											<integer>3</integer>
+											<key>UID</key>
+											<integer>0</integer>
+										</dict>
+										<dict>
+											<key>CHILDREN</key>
+											<array/>
+											<key>GID</key>
+											<integer>80</integer>
+											<key>PATH</key>
+											<!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19S7hKdqSmqG8eof2GXRIAtutJ13qrg8M9Qb6twj0QgXTFTi3k1De0t
+fl5m6d4c4DCk5+InYlxcsX2teSVuC4LCTFeW9qu/avg=
+											###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
+											<string>@APPLICATION_EXECUTABLE@.app</string>
+											<key>PATH_TYPE</key>
+											<integer>3</integer>
+											<key>PERMISSIONS</key>
+											<integer>493</integer>
+											<key>TYPE</key>
+											<integer>3</integer>
+											<key>UID</key>
+											<integer>0</integer>
+										</dict>
+										<!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+56aRFMEixqVSZxQ3rqPEbKnxUIqj2/BBkN2hcrVx3QXmzY3kJVKuE
+qdYDm1HoezinHMMdZGu2oQ==
+										###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
+										<dict>
+											<key>CHILDREN</key>
+											<array/>
+											<key>GID</key>
+											<integer>80</integer>
+											<key>PATH</key>
+											<string>Uninstall.app</string>
+											<key>PATH_TYPE</key>
+											<integer>3</integer>
+											<key>PERMISSIONS</key>
+											<integer>493</integer>
+											<key>TYPE</key>
+											<integer>3</integer>
+											<key>UID</key>
+											<integer>0</integer>
+										</dict>
+									</array>
+									<!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19+WZCs06qkcTlFu/cXRcYOtQtr0kvrPHBkRD61czWXHNS/d00I3t3Y
+da2zcKd0iesZ6NK0cY+Bk45BVFI2iFWWBFCNnun1dxxYzL2P45AChpJjbFZDRCRx
+									###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
 									<key>GID</key>
 									<integer>80</integer>
 									<key>PATH</key>
-									<string>@APPLICATION_EXECUTABLE@.app</string>
+									<string>VirtualSAFE</string>
 									<key>PATH_TYPE</key>
-									<integer>3</integer>
+									<integer>2</integer>
 									<key>PERMISSIONS</key>
-									<integer>493</integer>
+									<integer>509</integer>
 									<key>TYPE</key>
-									<integer>3</integer>
-									<key>UID</key>
-									<integer>0</integer>
-								</dict>
-								<dict>
-									<key>CHILDREN</key>
-									<array/>
-									<key>GID</key>
-									<integer>80</integer>
-									<key>PATH</key>
-									<string>Utilities</string>
-									<key>PATH_TYPE</key>
-									<integer>0</integer>
-									<key>PERMISSIONS</key>
-									<integer>493</integer>
-									<key>TYPE</key>
-									<integer>1</integer>
+									<integer>2</integer>
 									<key>UID</key>
 									<integer>0</integer>
 								</dict>
@@ -251,7 +304,7 @@
 									<key>PATH_TYPE</key>
 									<integer>0</integer>
 									<key>PERMISSIONS</key>
-									<integer>493</integer>
+									<integer>1005</integer>
 									<key>TYPE</key>
 									<integer>1</integer>
 									<key>UID</key>
@@ -344,6 +397,38 @@
 									<integer>0</integer>
 									<key>PATH</key>
 									<string>Widgets</string>
+									<key>PATH_TYPE</key>
+									<integer>0</integer>
+									<key>PERMISSIONS</key>
+									<integer>493</integer>
+									<key>TYPE</key>
+									<integer>1</integer>
+									<key>UID</key>
+									<integer>0</integer>
+								</dict>
+								<dict>
+									<key>CHILDREN</key>
+									<array/>
+									<key>GID</key>
+									<integer>0</integer>
+									<key>PATH</key>
+									<string>Automator</string>
+									<key>PATH_TYPE</key>
+									<integer>0</integer>
+									<key>PERMISSIONS</key>
+									<integer>493</integer>
+									<key>TYPE</key>
+									<integer>1</integer>
+									<key>UID</key>
+									<integer>0</integer>
+								</dict>
+								<dict>
+									<key>CHILDREN</key>
+									<array/>
+									<key>GID</key>
+									<integer>0</integer>
+									<key>PATH</key>
+									<string>Extensions</string>
 									<key>PATH_TYPE</key>
 									<integer>0</integer>
 									<key>PERMISSIONS</key>
@@ -466,43 +551,125 @@
 				</dict>
 				<key>PAYLOAD_TYPE</key>
 				<integer>0</integer>
+				<key>SHOW_INVISIBLE</key>
+				<false/>
+				<key>SPLIT_FORKS</key>
+				<true/>
+				<key>TREAT_MISSING_FILES_AS_WARNING</key>
+				<false/>
 				<key>VERSION</key>
-				<integer>2</integer>
+				<integer>5</integer>
 			</dict>
 			<key>PACKAGE_SCRIPTS</key>
 			<dict>
                  <key>POSTINSTALL_PATH</key>
                  <dict>
-                         <key>PATH</key>
-                         <string>@CMAKE_CURRENT_BINARY_DIR@/post_install.sh</string>
-                         <key>PATH_TYPE</key>
-                         <integer>0</integer>
+					<key>PATH</key>
+					<string>@CMAKE_CURRENT_BINARY_DIR@/post_install.sh</string>
+					<key>PATH_TYPE</key>
+					<integer>0</integer>
                  </dict>
                  <key>PREINSTALL_PATH</key>
                  <dict>
-                         <key>PATH</key>
-                         <string>@CMAKE_CURRENT_BINARY_DIR@/pre_install.sh</string>
-                         <key>PATH_TYPE</key>
-                         <integer>0</integer>
+					<key>PATH</key>
+					<string>@CMAKE_CURRENT_BINARY_DIR@/pre_install.sh</string>
+					<key>PATH_TYPE</key>
+					<integer>0</integer>
                  </dict>
                  <key>RESOURCES</key>
-                 <array/>
-         </dict>
+                 <array>
+                 	<dict>
+                 		<!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+5QNPdcgaIyqxynrbEOJH0Fi2riZtwb8sqofmTG1Pv8wu2Xsnp9yI1
+iN3usz5NPDS6gAGRTP96bHGBp1kkowWnp5TAY9oIXaFgmYGqLgOMQMxnbY0Gk+ic
+KwDQbPaDDOOcI2RNEXAwXyUnt8TGFhiTx2JmtM4Mt8N0vaDoJwqFS1xLJvubr/Bk
+OEoEaf4mOzoKgZSmnJAXbOTc+we4DDXX/3EuM8tO3CqYY5PiuEkPEF7AT7f4UPXt
+/YAu9QOfkRm+iQrlgFisS29xEbAsCmDkUonYBqUrg5c=
+                 		###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
+                 		<key>CHILDREN</key>
+                 		<array/>
+                 		<key>GID</key>
+                 		<integer>0</integer>
+                 		<key>PATH</key>
+                 		<string>@CMAKE_CURRENT_BINARY_DIR@/osxfuse.pkg</string>
+                 		<key>PATH_TYPE</key>
+                 		<integer>0</integer>
+                 		<key>PERMISSIONS</key>
+                 		<integer>420</integer>
+                 		<key>TYPE</key>
+                 		<integer>3</integer>
+                 		<key>UID</key>
+                 		<integer>0</integer>
+                 	</dict>
+                 	<dict>
+                 		<!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19gh7BuEVqWJSSfbaXxe0wpWtvnfGuE6n4DB8Yr6zyq/pL3YS8VEMMs
+JxTpP5hozgNP9/cgyTCxkwc/VPb09bpBUD12n7JjyXEc+JOAfirZegUlFpP5oi/t
+FbGG62UXOS9dS88P9jY0UkpBHk7GwWs9Ac1UurbC1546H07Gr7VDMqAlnq0lkKrz
+SpyuLVuUrEtfrCJQo9/oBLmVBiBxIdh9te6mYGCFjmZXb74eCl78mMIGwuOcbCvX
+FeAdeeI7VKjixe1uYDBARbHO9Y49npyRsrThKnL0kjc6PozDCE+vNU81/Y2NBfRe
+a9R6g1yTm621Uap4Y2xqJeT5jRq6iqEC5Sns0IiubWszVFtelOhqtT/u0oY5rr5p
+RdiG4hpBowUidOGEi19Rn+flftPe93Cqg2FIy44M7vdyDASh1jhbgPPGk0DEr1qV
+IfK5VTc6u86ezPJ6wvgxXCZE7lXkImHz5N3aqwQYgPPTfISeMebeoIeT6rJ0+/t1
+zBc6sj5BfGAlzhBgFf2465yusMH6043PmUk/hOUCVB/ffCO1JQoxtsIGSlw9snGs
+Z31whW7ogP3SP/c1NNKV1bXQ3TfcC9tBngIbj+VwBuZOoHjFqRVe1wXqEmw8wetD
+                 		###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
+                 		<key>CHILDREN</key>
+                 		<array/>
+                 		<key>GID</key>
+                 		<integer>0</integer>
+                 		<key>PATH</key>
+                 		<string>@CMAKE_CURRENT_BINARY_DIR@/osxfuse.xml</string>
+                 		<key>PATH_TYPE</key>
+                 		<integer>0</integer>
+                 		<key>PERMISSIONS</key>
+                 		<integer>420</integer>
+                 		<key>TYPE</key>
+                 		<integer>3</integer>
+                 		<key>UID</key>
+                 		<integer>0</integer>
+                 	</dict>
+                 </array>
+         	</dict>
 			<key>PACKAGE_SETTINGS</key>
 			<dict>
 				<key>AUTHENTICATION</key>
 				<integer>1</integer>
 				<key>CONCLUSION_ACTION</key>
 				<integer>0</integer>
+				<key>FOLLOW_SYMBOLIC_LINKS</key>
+				<false/>
 				<key>IDENTIFIER</key>
-				<string>@APPLICATION_REV_DOMAIN_INSTALLER@</string>
+				<!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+/Yc7Zyx5hsmzXmihFKX+v/nncWR59BZa6R1U1bfoZvom16KLheOF5
+QQjqyhBsvSy3whT4nsqmO1laQkQcLT7TDPeACDaoMX42INZpy3T08J3tWJ0lQRde
+9He1vDDvCX2RVmN2MIW6MawujnItDWBRArvamT7K96w=
+				###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
+				<string>my.com.elock.virtualsafe-installer</string>
+				<key>LOCATION</key>
+				<integer>0</integer>
 				<key>NAME</key>
-				<string>@APPLICATION_NAME_XML_ESCAPED@</string>
+				<!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+LraQ1icb24bHm6qmet+liJAba4BF5RxV49s+tzvi5lHWqEHZGegp7
+zPogkKsWh0utLbjAFffUlPbvOkaVmF2GMBolMMP4cPk8eMo0BUZOGTxeieSInUG9
+sXDE9kcmW2Fu7zg8t7+P5w==
+				###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
+				<string>VirtualSAFE Installer</string>
 				<key>OVERWRITE_PERMISSIONS</key>
+				<false/>
+				<key>PAYLOAD_SIZE</key>
+				<integer>-1</integer>
+				<key>REFERENCE_PATH</key>
+				<string></string>
+				<key>RELOCATABLE</key>
+				<false/>
+				<key>USE_HFS+_COMPRESSION</key>
 				<false/>
 				<key>VERSION</key>
 				<string>@MIRALL_VERSION_FULL@</string>
 			</dict>
+			<key>TYPE</key>
+			<integer>0</integer>
 			<key>UUID</key>
 			<string>7D7219B7-1897-48C3-8533-842BDEC46F71</string>
 		</dict>
@@ -532,6 +699,45 @@
 			<dict>
 				<key>ALIGNMENT</key>
 				<integer>6</integer>
+				<key>APPAREANCES</key>
+				<dict>
+					<key>DARK_AQUA</key>
+					<dict>
+						<key>ALIGNMENT</key>
+						<integer>6</integer>
+						<key>BACKGROUND_PATH</key>
+						<dict>
+							<key>PATH</key>
+							<string>@MAC_INSTALLER_BACKGROUND_FILE@</string>
+							<key>PATH_TYPE</key>
+							<integer>0</integer>
+						</dict>
+						<key>CUSTOM</key>
+						<true/>
+						<key>LAYOUT_DIRECTION</key>
+						<integer>0</integer>
+						<key>SCALING</key>
+						<integer>0</integer>
+					</dict>
+					<key>LIGHT_AQUA</key>
+					<dict>
+						<key>ALIGNMENT</key>
+						<integer>6</integer>
+						<key>BACKGROUND_PATH</key>
+						<dict>
+							<key>PATH</key>
+							<string>@MAC_INSTALLER_BACKGROUND_FILE@</string>
+							<key>PATH_TYPE</key>
+							<integer>0</integer>
+						</dict>
+						<key>CUSTOM</key>
+						<true/>
+						<key>LAYOUT_DIRECTION</key>
+						<integer>0</integer>
+						<key>SCALING</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
 				<key>BACKGROUND_PATH</key>
 				<dict>
 					<key>PATH</key>
@@ -540,9 +746,13 @@
 					<integer>0</integer>
 				</dict>
 				<key>CUSTOM</key>
-				<integer>@MAC_INSTALLER_DO_CUSTOM_BACKGROUND@</integer>
+				<true/>
+				<key>LAYOUT_DIRECTION</key>
+				<integer>0</integer>
 				<key>SCALING</key>
 				<integer>0</integer>
+				<key>SHARED_SETTINGS_FOR_ALL_APPAREANCES</key>
+				<true/>
 			</dict>
 			<key>INSTALLATION TYPE</key>
 			<dict>
@@ -553,6 +763,8 @@
 						<key>LIST</key>
 						<array>
 							<dict>
+								<key>CHILDREN</key>
+								<array/>
 								<key>DESCRIPTION</key>
 								<array/>
 								<key>OPTIONS</key>
@@ -560,13 +772,11 @@
 									<key>HIDDEN</key>
 									<false/>
 									<key>STATE</key>
-									<integer>1</integer>
+									<integer>0</integer>
 								</dict>
 								<key>PACKAGE_UUID</key>
 								<string>7D7219B7-1897-48C3-8533-842BDEC46F71</string>
 								<key>TITLE</key>
-								<array/>
-								<key>TOOLTIP</key>
 								<array/>
 								<key>TYPE</key>
 								<integer>0</integer>
@@ -578,10 +788,8 @@
 						<dict/>
 					</dict>
 				</dict>
-				<key>INSTALLATION TYPE</key>
-                                <integer>1</integer>
-                                <key>MODE</key>
-                                <integer>1</integer>
+				<key>MODE</key>
+				<integer>1</integer>
 			</dict>
 			<key>INSTALLATION_STEPS</key>
 			<array>
@@ -649,17 +857,39 @@
 			</dict>
 			<key>LICENSE</key>
 			<dict>
-				<key>KEYWORDS</key>
-				<dict/>
 				<key>LOCALIZATIONS</key>
-				<array/>
+				<array>
+					<dict>
+						<key>LANGUAGE</key>
+						<string>English</string>
+						<key>VALUE</key>
+						<dict>
+							<key>PATH</key>
+							<string>@CMAKE_CURRENT_BINARY_DIR@/license.rtf</string>
+							<key>PATH_TYPE</key>
+							<integer>0</integer>
+						</dict>
+					</dict>
+				</array>
 				<key>MODE</key>
 				<integer>0</integer>
 			</dict>
 			<key>README</key>
 			<dict>
 				<key>LOCALIZATIONS</key>
-				<array/>
+				<array>
+					<dict>
+						<key>LANGUAGE</key>
+						<string>English</string>
+						<key>VALUE</key>
+						<dict>
+							<key>PATH</key>
+							<string>@CMAKE_CURRENT_BINARY_DIR@/readme.rtf</string>
+							<key>PATH_TYPE</key>
+							<integer>0</integer>
+						</dict>
+					</dict>
+				</array>
 			</dict>
 			<key>SUMMARY</key>
 			<dict>
@@ -674,7 +904,12 @@
 						<key>LANGUAGE</key>
 						<string>English</string>
 						<key>VALUE</key>
-						<string>@APPLICATION_NAME_XML_ESCAPED@ Client</string>
+						<!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18Doa+AN3Ptd24GUmOQtQ+X4epSf51FDkq9c9/UVr6V4pBJ0mi3ZK+2
+Wd79nBDYf/fvW/S0d6gRXQt6X1/h641TxGhKjl1OhZoqn5kLOLDDZfHRJ9JEZss6
++B+LAef9vkoNyIo47maV6aCAAWHLVv81zJt+VyPyWmc=
+						###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
+						<string>VirtualSAFE</string>
 					</dict>
 				</array>
 			</dict>
@@ -682,26 +917,64 @@
 		<key>PROJECT_REQUIREMENTS</key>
 		<dict>
 			<key>LIST</key>
-			<array/>
-			<key>POSTINSTALL_PATH</key>
-			<dict/>
-			<key>PREINSTALL_PATH</key>
-			<dict/>
+			<!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+CpicIc4G18riCop6dIhaq/qRZWsnPfnnMMuhm+kHyUjbVUAvbiwSw
+U1gFQMn22NGhK49ExQNXioIf39fQnBqnrYmIbyGjuOMv96rDnMGqNgKU9B5t/jaN
+/C9klbh4K0H5MxjzwZttHIkTzs3grn+pDKXBmGVfi+luJwikuUjevd5M5BW0jYWn
+Hz/QsBMZ2ZlgjOn3EPYnww==
+			###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
+			<array>
+				<dict>
+					<key>BEHAVIOR</key>
+					<integer>3</integer>
+					<key>DICTIONARY</key>
+					<dict>
+						<key>IC_REQUIREMENT_OS_DISK_TYPE</key>
+						<integer>1</integer>
+						<key>IC_REQUIREMENT_OS_DISTRIBUTION_TYPE</key>
+						<integer>0</integer>
+						<key>IC_REQUIREMENT_OS_MINIMUM_VERSION</key>
+						<integer>100500</integer>
+					</dict>
+					<key>IC_REQUIREMENT_CHECK_TYPE</key>
+					<integer>0</integer>
+					<key>IDENTIFIER</key>
+					<string>fr.whitebox.Packages.requirement.os</string>
+					<key>MESSAGE</key>
+					<array>
+						<dict>
+							<key>LANGUAGE</key>
+							<string>English</string>
+							<key>SECONDARY_VALUE</key>
+							<string>macOS 10.11 (El Capitan) or newer is required for this installation.</string>
+							<key>VALUE</key>
+							<string>Unsupported macOS version</string>
+						</dict>
+					</array>
+					<key>NAME</key>
+					<string>Operating System</string>
+					<key>STATE</key>
+					<true/>
+				</dict>
+			</array>
 			<key>RESOURCES</key>
 			<array/>
+			<!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18lmF2w7ZANm6Lrep0euJyyT0bEEofiPXraoqUgD/ZHT6TSDzAkIDml
+9k4U6Ak7Ju4d1dYlxhnwCpB1F9THUhfsuHOsUWxIWlZbeRFUigl+La74g00iBWH7
+IIq1Bpc3kW9/QBuKs6kQgntEEvnTSMKVx8y973sBmhJyUdqGGlPZpaWgHA2DwmjE
+			###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
 			<key>ROOT_VOLUME_ONLY</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>PROJECT_SETTINGS</key>
 		<dict>
-			<key>ADVANCED_OPTIONS</key>
-			<dict/>
 			<key>BUILD_FORMAT</key>
 			<integer>0</integer>
 			<key>BUILD_PATH</key>
 			<dict>
 				<key>PATH</key>
-                                <string>@CMAKE_INSTALL_PREFIX@/.</string>
+				<string>../install/.</string>
 				<key>PATH_TYPE</key>
 				<integer>3</integer>
 			</dict>
@@ -874,9 +1147,18 @@
 				</dict>
 			</array>
 			<key>NAME</key>
-			<string>@APPLICATION_NAME_XML_ESCAPED@ Installer</string>
+			<!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18zrOMPVDH6j9NiOPiGuOZwOjoqNyU02t5Y/R4ishSAjZ69NPWKvoBs
+UGlXjJUx4w3i0W2WI22jKdeTEhCpEc947eqEUaDbDa5TWdIj4hK05YM/BzsSSbLS
+ARsrjJN2IZtSutH/KDSg3hkzq0ZFMznfv1ZnOBf6B2g=
+			###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->			
+			<string>VirtualSAFE-Installer</string>
+			<key>PAYLOAD_ONLY</key>
+			<false/>
 			<key>REFERENCE_FOLDER_PATH</key>
 			<string>@CMAKE_INSTALL_DIR@</string>
+			<key>TREAT_MISSING_PRESENTATION_DOCUMENTS_AS_WARNING</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>TYPE</key>

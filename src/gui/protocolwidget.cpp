@@ -183,10 +183,22 @@ ProtocolWidget::ProtocolWidget(QWidget *parent)
     connect(ProgressDispatcher::instance(), &ProgressDispatcher::itemCompleted,
         this, &ProtocolWidget::slotItemCompleted);
 
-    connect(_ui->_treeWidget, &QTreeWidget::itemActivated, this, &ProtocolWidget::slotOpenFile);
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/DNdqWDrXvSB/zczn5N9JT2p3UzbIa+8oM6bvatIgr75wrEzf+j32q
+U64N/SfQC/CV9IX8uyWwxRf16d4enrTMHuOw6J436abuaIww1/aatFZWgbli3OW4
+U0SRK8zCqLTPNFfzNgG42IEfGGeb5QSqhHRf92/wid8=
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    //connect(_ui->_treeWidget, &QTreeWidget::itemActivated, this, &ProtocolWidget::slotOpenFile);
 
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19wQjgG3FpivJGprekL9gYMV7Igv1/TqYiHoacmnvCkhc+vDCnHDtGV
+QIDPVSCKxuCbpmxTPkww7qwWy2Pb+JZzET+LedQULVsGimbCrVlKIwQshfwyQkn/
+1nb4qvvJUyf6E2F4Lv/3VA==
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     _ui->_treeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(_ui->_treeWidget, &QTreeWidget::customContextMenuRequested, this, &ProtocolWidget::slotItemContextMenu);
+    */
 
     // Adjust copyToClipboard() when making changes here!
     QStringList header;

@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Desinstalatzaile honek administratzaile b
 StrCpy $UAC_ERROR_LOGON_SERVICE "Saioa hasteko zerbitzua ez dago martxan, bertan behera uzten!"
 StrCpy $INIT_UNINSTALLER_RUNNING "Desinstalatzailea dagoeneko martxan da."
 StrCpy $SectionGroup_Shortcuts "Lasterbideak"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Mesedez blokeatu ganga datuak galarazteko. Klikatu Saiatu denean beraz egin duzu."

@@ -64,11 +64,23 @@ IssuesWidget::IssuesWidget(QWidget *parent)
     connect(ProgressDispatcher::instance(), &ProgressDispatcher::syncError,
         this, &IssuesWidget::addError);
 
-    connect(_ui->_treeWidget, &QTreeWidget::itemActivated, this, &IssuesWidget::slotOpenFile);
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19ZYX0UD2b1w4S7s1glcEXWunKFNYEbEH5a3aPcWQBPtax7au/ZCpeg
+P1HH5iyQmyStOpe23/HOIGucH+jPhR/m2DliZrGsrgBcr2ulJd3b2A/K8PtxJiIK
+1Fmd0Z4nKcXQP+ZnjSVwgX3Q9qM4vXNZyQdbsBs6xas=
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    //connect(_ui->_treeWidget, &QTreeWidget::itemActivated, this, &IssuesWidget::slotOpenFile);
     connect(_ui->copyIssuesButton, &QAbstractButton::clicked, this, &IssuesWidget::copyToClipboard);
 
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18ZIub747Pv3MiGJG095WPvDR5imQgiDg0LNRZF+c8AJRzc3W2ag8ut
+UADtJx0BU/w8b2GYQONRkkA3LXH6MSP0nMii6ye6JUsK8cnQ89xpGd4b5NSmXwOC
+qD8oazoJY9Fh08S90qqMaA==
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     _ui->_treeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(_ui->_treeWidget, &QTreeWidget::customContextMenuRequested, this, &IssuesWidget::slotItemContextMenu);
+    */
 
     connect(_ui->showIgnores, &QAbstractButton::toggled, this, &IssuesWidget::slotRefreshIssues);
     connect(_ui->showWarnings, &QAbstractButton::toggled, this, &IssuesWidget::slotRefreshIssues);
@@ -285,7 +297,14 @@ void IssuesWidget::slotProgressInfo(const QString &folder, const ProgressInfo &p
         }
         emit ProgressDispatcher::instance()->folderConflicts(folder, conflicts);
 
-        _ui->_conflictHelp->setHidden(Theme::instance()->conflictHelpUrl().isEmpty() || conflicts.isEmpty());
+        /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19tUzonwx2t4nO/98XEj/3IQpbUVPmPOfc4MfQd+6vdh2Nw0AJgMsT4
+hnw5cR57GHV+0VzxcGjVXZkds1g5nu70+YugbedRJDhDoaWi3Y48rS1s0N7fcvEM
+jn+wqO8C9NUgFJW1X/WGqTXmRKAPoKziEnZ6w18ApY7qJzk1Pm6lnq/stV3RBU6l
+t+9NH08zc/S5UiOIIPreglE+whah9DJdnKDVerfZPhWfcJtnPOstgT+m+l44NIOR
+hHRooT6nNK/ao3KclYGWWA==
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+        _ui->_conflictHelp->setHidden(true);
     }
 }
 

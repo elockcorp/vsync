@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Das Deinstallationsprogramm erfordert Adm
 StrCpy $UAC_ERROR_LOGON_SERVICE "Anmeldedienst läuft nicht, abbruch!"
 StrCpy $INIT_UNINSTALLER_RUNNING "Das Deinstallationsprogramm wird bereits ausgeführt."
 StrCpy $SectionGroup_Shortcuts "Verknüpfungen"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Bitte sperren Tresor Datenbeschädigung zu verhindern. Klicken Sie auf Wiederholen, wenn Sie dies getan haben."

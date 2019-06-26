@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Il programma di disinstallazione necessit
 StrCpy $UAC_ERROR_LOGON_SERVICE "Il servizio di accesso non è in esecuzione, interruzione in corso!"
 StrCpy $INIT_UNINSTALLER_RUNNING "Il programma di disinstallazione è già in esecuzione."
 StrCpy $SectionGroup_Shortcuts "Scorciatoie"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Si prega di bloccare volta per prevenire la corruzione dei dati. Fare clic su Riprova quando avete fatto così."

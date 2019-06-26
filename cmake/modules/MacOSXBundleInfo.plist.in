@@ -11,7 +11,12 @@
         <key>CFBundleExecutable</key>
         <string>@APPLICATION_EXECUTABLE@</string>
         <key>CFBundleIconFile</key>
-        <string>@APPLICATION_ICON_NAME@.icns</string>
+        <!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/PGRxV11HMdcgGmjBxR9ES0rxj0rypwPkUe1oltivovJxDCgWJNHrX
+DhI3V+fmBxOqaETUnaXmT12iXoW+wLmYGxxn5gCT7pq0SBWARX0UfAi9Ka5Gs1J0
+nV3RHFFM/nY1aEXNN/LLtakXbOOa8m+8cGeNJBWzOt0=
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
+        <string>@APPLICATION_NAME@.icns</string>
         <key>CFBundleIdentifier</key>
         <string>@APPLICATION_REV_DOMAIN@</string>
         <key>CFBundleInfoDictionaryVersion</key>
@@ -26,8 +31,13 @@
         <string>@MIRALL_VERSION_FULL@</string>
         <key>CFBundleShortVersionString</key>
         <string>@MIRALL_VERSION_STRING@</string>
+        <!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+YY/E/XEnt6IoOQCzQfu+6WZkv6Jc4IubK0z7QL0l1ZelHP9ZfuL5k
+5Ff5xwIdebY8XDTVbBIpyV/+6IqX1Zmpr6oJS1FspcO21fyIQVbRG8wefgnxzDZu
+rg5mkIv08iqsROcmxNp39vLQlOhOLb9LXQxDqx7tP3c=
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
         <key>NSHumanReadableCopyright</key>
-        <string>(C) 2014-2019 @APPLICATION_VENDOR@</string>
+        <string>@APPLICATION_VENDOR@</string>
         <key>NSRequiresAquaSystemAppearance</key>
         <true/>
         <key>SUShowReleaseNotes</key>

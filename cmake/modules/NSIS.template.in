@@ -1,7 +1,14 @@
 ;ownCloud installer script.
 
 !define APPLICATION_SHORTNAME "@APPLICATION_EXECUTABLE@"
-!define APPLICATION_NAME "@APPLICATION_NAME@"
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+u629FCNrCID38V0AyTmXPcUtLrRVzJcsPHYjecG4ZIVCWfkkneGjx
+a0+hQOGfNyYYCW9/1Acj6eZJ6biyWHfOGiVS2xCkX2D9cQOjoliIne6H/623a3DA
+nv54+z4gqlKmD573Wf8WZ26AyQUbAiM7WVXvN10mtPXkTYF3li/NXjl+ZEBYlXpC
+ISpIm6pRrNiwr0Ux+QTH4qkG2qMwfVIjctupgai2/I9u/IQY299dRT+D4zRjTYS5
+etlKItmueTdsViqxMppUsg==
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+!define APPLICATION_NAME "VirtualSAFE"
 !define APPLICATION_VENDOR "@APPLICATION_VENDOR@"
 !define APPLICATION_EXECUTABLE "@APPLICATION_EXECUTABLE@.exe"
 !define APPLICATION_CMD_EXECUTABLE "@APPLICATION_EXECUTABLE@cmd.exe"
@@ -20,10 +27,22 @@
   !define OPTION_LICENSE_AGREEMENT
 !endif
 !define OPTION_UAC_PLUGIN_ENHANCED
-!define OPTION_SECTION_SC_SHELL_EXT
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19SqofLj0JN/cx/SvLmY4tdSNK2cOqi3MQ5txWpt4MRDLM3JbKqV9eE
+QKDgRAi73AO6HYD7SaHbzQ==
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+; !define OPTION_SECTION_SC_SHELL_EXT
 !define OPTION_SECTION_SC_START_MENU
-!define OPTION_SECTION_SC_DESKTOP
-!define OPTION_SECTION_SC_QUICK_LAUNCH
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+fbWzQuGE/3zijCuXzLc2HfFaWb4UZBq3BKmGtd3Plj+YpVixUEoBY
+ufYCnJLGk26pUjEf141JOA==
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+; !define OPTION_SECTION_SC_DESKTOP
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18hEuOV4uC3SKiAZKYo6vdtTebTvT7sC+LgijjASWTpsvggyDzazUzs
+RDRGVVK2HU4y1qhFgtg4d/dJSYOTP16TzhgnSfB6qeM=
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+; !define OPTION_SECTION_SC_QUICK_LAUNCH
 !define OPTION_FINISHPAGE
 !define OPTION_FINISHPAGE_LAUNCHER
 ; !define OPTION_FINISHPAGE_RELEASE_NOTES
@@ -71,14 +90,31 @@ Var NoAutomaticUpdates
 ;-----------------------------------------------------------------------------
 ; Initial installer setup and definitions.
 ;-----------------------------------------------------------------------------
-Name "@CPACK_NSIS_PACKAGE_NAME@"
-BrandingText "${APPLICATION_NAME} ${VERSION}  -- ${BUILD_TIME}"
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+1bZxNX2mFPJ7v+j5rjeUlM94xbQynpWpafgLHQTXWSuCUdyFHbMfa
+XOlxiZVmFOQSHsIcuvWcx5xgjqJ6s4OsC7lQYnoFL0nOPZarL9+weLG7G8aklZP/
+3syGwx1wgqOw4zFK36oxzw==
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+Name "VirtualSAFE"
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/i3ju7cnMyc17DwYME1p4xVcEcCuBbEELRSf6jIEP+ItmaB0vy2laK
+OeehN//zDARVk0QM8utOsyd7+zsWjHDTVstd4ro+Ub6bvi25mHfLV522xVJEGBDh
+937u+aLmbdSb+12GJHaWXyy9SOajoiLzRdhD0sR2Jg0=
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+BrandingText " "
 OutFile "@CPACK_TOPLEVEL_DIRECTORY@/@CPACK_OUTPUT_FILE_NAME@"
 InstallDir "$PROGRAMFILES\@CPACK_PACKAGE_INSTALL_DIRECTORY@"
 InstallDirRegKey HKCU "Software\${APPLICATION_VENDOR}\${APPLICATION_NAME}" ""
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19xMHoJJwOF6jXHLHIOQty55WgPcB8AN6jfJeXCQZ9Om74Mb1CC3r8b
+R7ZG79t3S2Dd7YY/5d41c1HaDEzCKugrEIfieFktjOLBdnCvnw4clNWXOfa9ZwYA
+3c85hcYOKlH8NdxmazXYKoly4+Ooz/pilF5gbql7GBsBHtEwjsDHXl7ach/7kbxi
+j91mvV9WhiIlW3jZekLuI3Xqk75WKdlKREsLAgfndQPFl4tGNotEk78app/Lwhp/
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
 InstType Standard
-InstType Full
-InstType Minimal
+;InstType Full
+;InstType Minimal
+ShowInstDetails nevershow
 CRCCheck On
 SetCompressor @CPACK_NSIS_COMPRESSOR@
 RequestExecutionLevel user ;Now using the UAC plugin.
@@ -101,6 +137,17 @@ ReserveFile "${NSISDIR}\Plugins\InstallOptions.dll"
 !include nsProcess.nsh ;Used to kill the running process
 !include Library.nsh ;Used by the COM registration for shell extensions
 !include x64.nsh ;Used to determine the right arch for the shell extensions
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19bQnPBDmAtGQaa59E+eDDxGkycQfSod3uE/Gd+oBWSVojxhtKHVt53
+G4ZNsHg72pEyeCyLXc+AopBk9N4cvuTkObx2n0LWvBi+G37hDViHcF41tRwNjjKz
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+!include StrFunc.nsh
+${StrStr}
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+yiIoHAtiFzgBpPgjGd1DimO8wz8k6UWGqdNhNh4dNq2QaJVGH2dyH
+x6DU+NWqXiSphtFLnmXh/eHAyYoCtHRZ5oUfWdnYDLUfyvMiDMVNGQQPrwTxjGaf
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+!include ${source_path}/admin/win/nsi/MoveFileFolder.nsh
 
 !include ${source_path}/admin/win/nsi/lib/fileassoc.nsh
 
@@ -130,7 +177,11 @@ ReserveFile "${NSISDIR}\Plugins\InstallOptions.dll"
    !define MUI_FINISHPAGE_SHOWREADME_TEXT $MUI_FINISHPAGE_SHOWREADME_TEXT_STRING
 !endif
 !ifdef OPTION_FINISHPAGE_LAUNCHER
-   !define MUI_FINISHPAGE_NOAUTOCLOSE
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18XIpXpAmXJyOF8dP7F6M6Fusv5av7o23jvGY83CpRN9S8xDKC/849Y
+AsTrvEaGvaZuBLUjEo7e3xnXg0GRNyqO2m8dfPtyUK6ji8fiPeJBeORym3+nseOJ
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   ;!define MUI_FINISHPAGE_NOAUTOCLOSE
    !define MUI_FINISHPAGE_RUN
    !define MUI_FINISHPAGE_RUN_FUNCTION "LaunchApplication"
 !endif
@@ -142,8 +193,17 @@ ReserveFile "${NSISDIR}\Plugins\InstallOptions.dll"
 !ifdef OPTION_LICENSE_AGREEMENT
    !insertmacro MUI_PAGE_LICENSE "${APPLICATION_LICENSE}"
 !endif
-Page custom PageReinstall PageLeaveReinstall
-!insertmacro MUI_PAGE_COMPONENTS
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/jr9IsDKGwCpcPNvNEmGhicbrWU+pCiJoiTwluKQMn5e75kMEPEWSH
+oMZ+gXtQEner2GkILQKfSlff4CXXKRTpT68X7i9V61+zVGLiB42tN+jSKkIp2wDu
+jbTR7MHe6SzRdtIQWuG55w==
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+;Page custom PageReinstall PageLeaveReinstall
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+PcKoOGHyHVn0BTq7NgpWVYDNFv/Nsqdtz+9clKI3dDYlOxtIUI0LQ
+Kv/NCjt+IywDFw9MT7P2cFRbAYR+zKHEAESzwJceLy8=
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+;!insertmacro MUI_PAGE_COMPONENTS
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 !ifdef OPTION_FINISHPAGE
@@ -250,8 +310,18 @@ VIAddVersionKey /LANG=${LANG_ENGLISH} "FileVersion" "${VERSION}"
 #                                                                            #
 ##############################################################################
 
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18jMafrew0K5KLkcmYJzLKuRe+yDRFlnRiiYxUCMD8sriceBQ3eyaQw
+s9pIAuQHrgcu9LLfaXU+WaXCi3nf3FBmu1rtExUcrqIzQr7wB6CfGLvi5dAW9yEq
+q7QgIOyZ3qIY7iDchpS8Ko7Cd798LnshYw41wkbQoxQ5kTDKUQrSnvpRpRTfege6
+WpGB7Bxw1iRA4AF0umLiQjciZnSS0O6nhIXGidOaMSK9T3hyU4O2NBwxhWA4NjrP
+FuPwSBL+cFzyOaWXuJzO18ro2sY+ueLbVCdNfCEyjByRoAfygoSABndJC+w+ILpS
+LCMjxvrVrAczh428Q9Igjt7m2VdDVou+0tqQjZLWdhaZ3Y+Bye/cn1F8RUZpGX5u
+gZi/ZuWaFYfY889wtXRNUDX/ORPnFJe2G8T7RX4g4YAgJcV9RWF7TW37PrDjRIZD
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
 Function LaunchApplication
    !insertmacro UAC_AsUser_ExecShell "" "$INSTDIR\${APPLICATION_EXECUTABLE}" "" "" ""
+   !insertmacro UAC_AsUser_ExecShell "" "$INSTDIR\VirtualSAFE.exe" "" "" ""
 FunctionEnd
 
 ##############################################################################
@@ -266,9 +336,13 @@ FunctionEnd
 !macroend
 
 !macro ConfirmEndProcess processName
-   MessageBox MB_YESNO|MB_ICONEXCLAMATION \
-     $ConfirmEndProcess_MESSAGEBOX_TEXT \
-     /SD IDYES IDYES process_${processName}_kill IDNO process_${processName}_ended
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19oX9lcIGeaYwjqjzMni5HXhw+pcrp8GHCUcAE0hnGXQ19qDJKB1iTb
+y7TKlzTYMGJ86Zn9L5CIFxg7y3ZgVzMT1tfYovyv8K18RJm9cKzKBeO1q3uh3CbI
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   ;MessageBox MB_YESNO|MB_ICONEXCLAMATION \
+   ;  $ConfirmEndProcess_MESSAGEBOX_TEXT \
+   ;  /SD IDYES IDYES process_${processName}_kill IDNO process_${processName}_ended
    process_${processName}_kill:
       DetailPrint $ConfirmEndProcess_KILLING_PROCESSES_TEXT
       ${nsProcess::KillProcess} ${processName} $R0
@@ -284,17 +358,32 @@ FunctionEnd
    no_process_${processName}_to_end:
 !macroend
 
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+XimibzviU8M8wWvJKPRre8fsbPL9qpK25vD7Q9q30wSfVvPu99Usn
+M1lXS9a+H4GTrRsMEsjFj/cTECkILnimLuiw5kQitnjMlunWKl6k0oyKSC6Pcv4s
+zbJACVdwzm/xpwTlz1C7XkGt6qLurvXXdJlNXR1nl/Zr2r1khQ5TkUGLROT3Y6Pk
+YvN56ABu4Kb04hu244kngQ==
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
 Function EnsureOwncloudShutdown
+   ${While} ${FileExists} "$DESKTOP\My VirtualSAFE.lnk"
+      MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION \
+         $ConfirmVaultLock_MESSAGEBOX_TEXT \
+         /SD IDRETRY IDRETRY mountcheckended IDCANCEL mountcheckcancel
+      mountcheckcancel:
+         Abort
+         Quit
+      mountcheckended:
+   ${EndWhile}
    !insertmacro CheckAndConfirmEndProcess "${APPLICATION_EXECUTABLE}"
+   !insertmacro CheckAndConfirmEndProcess "VirtualSAFE.exe"
 FunctionEnd
 
 Function InstallRedistributables
-   ${If} ${RunningX64}
-      ExecWait '"$OUTDIR\vcredist_x64.exe" /install /quiet'
-   ${Else}
-      ExecWait '"$OUTDIR\vcredist_x86.exe" /install /quiet'
-   ${EndIf}
-   Delete "$OUTDIR\vcredist_x86.exe"
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+ulW9lUAHPhQitZeUOVSrmeOFQnc3HIJML7gfP7AoY4M6GchEhpbdv
+JYkbuMIS5919myW5lJHrD3IsIUVrRf4gW0kp/CrdL/Q=
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   ExecWait '"$OUTDIR\vcredist_x64.exe" /install /quiet'
    Delete "$OUTDIR\vcredist_x64.exe"
 FunctionEnd
 
@@ -377,7 +466,12 @@ FunctionEnd
 #                                                                            #
 ##############################################################################
 Section "${APPLICATION_NAME}" SEC_APPLICATION
-   SectionIn 1 2 3 RO
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/TRsuwrA41eKLzVZrz19HrGRuuQEQfF7SrWr/H4KOCSaiBcI+pjzbz
+Zr/3XQCYqfjKGxs6s9pNBr85Npt4bIkVK8H3DgEXEkUx1A2vzbxDZCjUS7/lY/VM
+RAq4dNVH+rhzPn3FnPk2hc4khktJMuKDHhNkwBuVRbQ=
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   SectionIn 1 RO
    SetDetailsPrint listonly
 
    SetDetailsPrint textonly
@@ -476,31 +570,86 @@ Section "${APPLICATION_NAME}" SEC_APPLICATION
    ;Add file association
    !insertmacro APP_ASSOCIATE "${APPLICATION_VIRTUALFILE_SUFFIX}" "${APPLICATION_VIRTUALFILE_FILECLASS}" "Virtual File for Remote File" "$INSTDIR\${APPLICATION_EXECUTABLE},0" "Download" "$INSTDIR\${APPLICATION_EXECUTABLE} $\"%1$\""
 
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19NFNhOa8e3SACfelP1BVnDk/dp8wnspNoNcoxDMXupMoklzNC5sZVT
+sgvj51IWnP6/GrCt3+69kv3ZB3GUoMBfm3frMhpD9Mwfz/QzyxUR6bVs8wfaPwuG
+Ip1PJlrDkRZUc+wIxm/4R6q8V6bjFxCQHkWlqjvithJNten8Ypp9neHaG+DE6eZl
+JxoluZMp8CC12wor75h+mw==
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   SetOutPath "$INSTDIR"
+   File "${SOURCE_PATH}/CUSTOM_prebuilt_vsafe_win32/VirtualSAFE/*.dll"
+   File "${SOURCE_PATH}/CUSTOM_prebuilt_vsafe_win32/VirtualSAFE/VirtualSAFE.*"
+   SetOutPath "$INSTDIR\app"
+   File /r "${SOURCE_PATH}/CUSTOM_prebuilt_vsafe_win32/VirtualSAFE/app/"
+   SetOutPath "$INSTDIR\runtime"
+   File /r "${SOURCE_PATH}/CUSTOM_prebuilt_vsafe_win32/VirtualSAFE/runtime/"
+
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/DVdicBvXAGplULW6UgELDcz3+/U8rpvc47/eS67iUwNWqj1Xwz6V/
++Z4jn3XYVELW9lrO2FseoNgckWiubsWKnIMvj3UKmfcih29l4E0irYvIB9PQZYNS
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   SetOutPath "$TEMP"
+   File "${BUILD_PATH}\vcredist_x64.exe"
+   Call InstallRedistributables
+
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+YAkGZ/dFc6/tqM8f2NZI07PNDOEPSc2SF1xIufQkB/zzFeAEY4kSF
+uDz2el0SFPiwLGYtjZMn2o5ER65ayCbyjaMFbxoNdkzD0VvQN+l9dswViinXM+rr
+bh0D9dQUur6H5mNFxtv3fQ==
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   ${DisableX64FSRedirection}
+   ${IfNot} ${FileExists} "$SYSDIR\drivers\dokan1.sys"
+      SetOutPath "$TEMP"
+      File "${SOURCE_PATH}/CUSTOM_prebuilt_vsafe_win32/Dokan_x64.msi"
+   ${EndIf}
+   ${EnableX64FSRedirection}
+
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+Zdh4WQA+BfFGqgmKaSM0qcLNu0J2pylkM0OqbcdE0l7YZg8upjmEy
+OkONXZPvgB8hDNhdimWXTFgVrfDhLbtKdSqJ0TA7vysxDqb36KoPyyZWxFztRfJy
+/Rt6zbGaWvQkoH3rG0Fzzbec46BkDqa2l4gK7iOaZDPRWXo8m4NAtdzhnk+oT1Pp
+eteOKvw/HGbf/ID/Lbk1FQTZPobYJ3M8p39CWU0UdmI6fjpbWLOmLGNc6H5Rfjyw
+W0iU3gKv5ADYe0dQJ10LOw==
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   !insertmacro Locate
+   ${If} ${FileExists} "$TEMP\CUSTOM_single_user_credential"
+      !insertmacro MoveFile "$TEMP\CUSTOM_single_user_credential" "$PROFILE\vsync.login"
+   ${EndIf}
+   ${If} ${FileExists} "$TEMP\CUSTOM_public_key.der"      
+      CreateDirectory "$PROFILE\AppData\Roaming\VirtualSAFE"
+      !insertmacro MoveFile "$TEMP\CUSTOM_public_key.der" "$PROFILE\AppData\Roaming\VirtualSAFE\public_key.der"
+   ${EndIf}
+
 SectionEnd
 
 !ifdef OPTION_SECTION_SC_SHELL_EXT
    ${MementoSection} $OPTION_SECTION_SC_SHELL_EXT_SECTION SEC_SHELL_EXT
-      SectionIn 1 2
+      /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+Dcn9jKpkolckOeLpm3XU005eWiw44pT9B/oSK5I3ndbUuN+XYreOH
+ssbYGt6fz07bN96Dhw7n4kpYJd0IKZkHNiefhfLlnq9RtRLHPyMAIIKnFd5YYCvS
+      ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+      SectionIn 9 RO
       SetDetailsPrint textonly
       DetailPrint $OPTION_SECTION_SC_SHELL_EXT_DetailPrint
-      File "${BUILD_PATH}\vcredist_x86.exe"
+      /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/Berh82Bxl3z6VCX/Bfz7nCQj/afDMC8UsyFC7y5OK3oWV4478C3pu
+Y6zP4+U6HgdBhHrqVxDxCSZAbcnSFUke+Xau2mDo+Ig=
+      ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
       File "${BUILD_PATH}\vcredist_x64.exe"
       Call InstallRedistributables
       CreateDirectory "$INSTDIR\shellext"
       !define LIBRARY_COM
       !define LIBRARY_SHELL_EXTENSION
       !define LIBRARY_IGNORE_VERSION
-      ${If} ${RunningX64}
-         !define LIBRARY_X64
-         !insertmacro InstallLib DLL NOTSHARED REBOOT_PROTECTED "${SOURCE_PATH}\binary\shell_integration\windows\Release\x64\OCUtil_x64.dll" "$INSTDIR\shellext\OCUtil_x64.dll" "$INSTDIR\shellext"
-         !insertmacro InstallLib REGDLL NOTSHARED REBOOT_PROTECTED "${SOURCE_PATH}\binary\shell_integration\windows\Release\x64\OCOverlays_x64.dll" "$INSTDIR\shellext\OCOverlays_x64.dll" "$INSTDIR\shellext"
-         !insertmacro InstallLib REGDLL NOTSHARED REBOOT_PROTECTED "${SOURCE_PATH}\binary\shell_integration\windows\Release\x64\OCContextMenu_x64.dll" "$INSTDIR\shellext\OCContextMenu_x64.dll" "$INSTDIR\shellext"
-         !undef LIBRARY_X64
-     ${Else}
-         !insertmacro InstallLib DLL NOTSHARED REBOOT_PROTECTED "${SOURCE_PATH}\binary\shell_integration\windows\Release\Win32\OCUtil_x86.dll" "$INSTDIR\shellext\OCUtil_x86.dll" "$INSTDIR\shellext"
-         !insertmacro InstallLib REGDLL NOTSHARED REBOOT_PROTECTED "${SOURCE_PATH}\binary\shell_integration\windows\Release\Win32\OCOverlays_x86.dll" "$INSTDIR\shellext\OCOverlays_x86.dll" "$INSTDIR\shellext"
-         !insertmacro InstallLib REGDLL NOTSHARED REBOOT_PROTECTED "${SOURCE_PATH}\binary\shell_integration\windows\Release\Win32\OCContextMenu_x86.dll" "$INSTDIR\shellext\OCContextMenu_x86.dll" "$INSTDIR\shellext"
-      ${Endif}
+      /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/gzIFt6hEHW4KMWr9uvwzprq7ketVvzKkieSLW53bsSzg5QY2Jy9/l
+zydRfLgRotjGIsi11en1u6yMVI3pU6WlJ14OSlAoMlc=
+      ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+      !define LIBRARY_X64
+      !insertmacro InstallLib DLL NOTSHARED REBOOT_PROTECTED "${SOURCE_PATH}\binary\shell_integration\windows\Release\x64\OCUtil_x64.dll" "$INSTDIR\shellext\OCUtil_x64.dll" "$INSTDIR\shellext"
+      !insertmacro InstallLib REGDLL NOTSHARED REBOOT_PROTECTED "${SOURCE_PATH}\binary\shell_integration\windows\Release\x64\OCOverlays_x64.dll" "$INSTDIR\shellext\OCOverlays_x64.dll" "$INSTDIR\shellext"
+      !insertmacro InstallLib REGDLL NOTSHARED REBOOT_PROTECTED "${SOURCE_PATH}\binary\shell_integration\windows\Release\x64\OCContextMenu_x64.dll" "$INSTDIR\shellext\OCContextMenu_x64.dll" "$INSTDIR\shellext"
+      !undef LIBRARY_X64
       !undef LIBRARY_COM
       !undef LIBRARY_SHELL_EXTENSION
       !undef LIBRARY_IGNORE_VERSION
@@ -511,36 +660,75 @@ SectionGroup $SectionGroup_Shortcuts
 
 !ifdef OPTION_SECTION_SC_START_MENU
    ${MementoSection} $OPTION_SECTION_SC_START_MENU_SECTION SEC_START_MENU
-      SectionIn 1 2 3
+      /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1983Nhg/obPd2Pz9z+PEl6UTwIPPOa4q1LoKH/XhWrlBT5XOxSgiPTa
+kQU0SS54AmXrLJTSktq7Pm85WS043rUpQjCdJycshUc=
+      ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+      SectionIn 1 RO
       SetDetailsPrint textonly
       DetailPrint $OPTION_SECTION_SC_START_MENU_DetailPrint
       SetDetailsPrint listonly
       SetShellVarContext all
-      CreateShortCut "$SMPROGRAMS\${APPLICATION_NAME}.lnk" "$INSTDIR\${APPLICATION_EXECUTABLE}"
+      /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18g1QUA+O4duwD7tOh5app0Eq9DSlShGrkeFBAn2dDDqbIeieEoSsRF
+pfKjWVbaWsdSjhkidbQ6DmGLeJ2swWPVGuYvVqDS3LXZa1tu0ntlH9BM3VR+iucd
+rZq/gyKEGJPnViZa2L510gYg1Fcfvjnr3NpGkAaFISYZ6JsG4+Vl5omKSdSZvhPZ
+KD3YTUmHeNxmFgqmXqIO8MVhFjkXPf1sSsIrpuY6L+JQ1goT/bIds/VMdt1r3AET
+6E8Juhdu8jUqifTKKDydVIz85jLCPXJX3cK841CEpj7wbNMimBau2X9AY1zkiPB7
+hafmOhRRDZefFfGhd3hyoauRkK0fr7CAgYQDQr9IuYFE9W/U7cMqWwUbZmHlkyzN
+0QLJaq2VEkYo3A4M7mMVH0f20snkn/2lWq7Q79mWsFI=
+      ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+      CreateDirectory "$SMPROGRAMS\VirtualSAFE"
+      CreateShortCut "$SMPROGRAMS\VirtualSAFE\VirtualSAFE.lnk" "$INSTDIR\VirtualSAFE.exe"
+      CreateShortCut "$SMPROGRAMS\VirtualSAFE\VSYNC.lnk" "$INSTDIR\${APPLICATION_EXECUTABLE}"
       SetShellVarContext current
    ${MementoSectionEnd}
 !endif
 
 !ifdef OPTION_SECTION_SC_DESKTOP
    ${MementoSection} $OPTION_SECTION_SC_DESKTOP_SECTION SEC_DESKTOP
-      SectionIn 1 2
+      /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19z4LXrpqqnI5wWknw0CKbjjA7OX2bqbUE0qHSHMsgcHkaU34nyyb4e
+1wMbJ2A+Wp5lxtjLM2QQ0p+5U9TbT1Rn0BT/b8u86qPBwEElSQ6H96ix+Dykbya7
+      ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+      SectionIn 9 RO
       SetDetailsPrint textonly
       DetailPrint $OPTION_SECTION_SC_DESKTOP_DetailPrint
       SetDetailsPrint listonly
       SetShellVarContext all
-      CreateShortCut "$DESKTOP\${APPLICATION_NAME}.lnk" "$INSTDIR\${APPLICATION_EXECUTABLE}"
+      /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+mwdDpvAzehpZRqTxoqOURt7AQ5HxlnKA1lmqbh8bnAujK7tKtRptB
+OXwB1oUJz14L8UJ65iz5fzdBZtVZxClouI0cYmt2Sgi1YxJavFt0qMgWx09PZ2Gj
+G2WCbqXvUzHq4OaZQEfzXR2Lo9EaxUH4d2JbMiP2XNHWbPBkszhyAYauTB2+62Gv
+3MKENjZ7tR80Nue2T+SoN+ZM8NwoQkvpp6NpetvN7VtiVKyXqvIn0jNTijMsvQCQ
+HPVOaykQp/VQibAbgSUPVMiJJZdz96+/EO9qblyWgDcVP7xy8fERVsHSubkDNGo4
+4epnjW5BKjsq2eIguSNtmA==
+      ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+      CreateShortCut "$DESKTOP\VSYNC.lnk" "$INSTDIR\${APPLICATION_EXECUTABLE}"
       SetShellVarContext current
    ${MementoSectionEnd}
 !endif
 
 !ifdef OPTION_SECTION_SC_QUICK_LAUNCH
    ${MementoSection} $OPTION_SECTION_SC_QUICK_LAUNCH_SECTION SEC_QUICK_LAUNCH
-      SectionIn 1 2
+      /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19xxK1qnkSOWtaJ5XQEkhUjIgxrR8Zl6Ksvv1SL4uhPfaPDZIDTs6l3
+ZPsH7Jn1mRcRHi0aCNRzK7i/7Vtsa61G6Qyd/TKrctozYvCU0sEaDxKtjMO16N8q
+      ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+      SectionIn 9 RO
       SetDetailsPrint textonly
       DetailPrint $OPTION_SECTION_SC_QUICK_LAUNCH_DetailPrint
       SetShellVarContext all
       SetDetailsPrint listonly
-      CreateShortCut "$QUICKLAUNCH\${APPLICATION_NAME}.lnk" "$INSTDIR\${APPLICATION_EXECUTABLE}"
+      /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19RtfL3I84nbQM5WQb3R53xF56QzQ1qvGPtxk4yGgDt3cO+0CapvX/p
+lc1q+W57hoPFcQm2cDJQ5ozto0jjZWL3O/ilVJ9Z9sR3Eq+PU+p64GHH8YIsZTP2
+3ZYBYqskfNZLEGPhKOdB4vXZDBsv3CMTdE4yK4LSouDqemBhl+aY6IHzYg2tKaR1
+PkJQVQ7A/e4VjK/Ud8o2UOlUs1zSUbjRaoTVlCyZhfTBLKhebNGOgnqeC/AvTWCb
+xCWZfdyn5BL/ESeOZoVacM832zFpohnQDwzDHa/YUxspvRyPARKGypekB14GqEqu
+bf1qF2pK+Gzr9nPyrS7441beYsD5HmjbVaA9oPNsWmk=
+      ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+      CreateShortCut "$QUICKLAUNCH\VSYNC.lnk" "$INSTDIR\${APPLICATION_EXECUTABLE}"
       SetShellVarContext current
    ${MementoSectionEnd}
 !endif
@@ -582,6 +770,17 @@ Section -post
    ;Add or Remove Programs entry.
    WriteRegExpandStr ${MEMENTO_REGISTRY_ROOT} "${MEMENTO_REGISTRY_KEY}" "UninstallString" '"$INSTDIR\Uninstall.exe"'
    WriteRegExpandStr ${MEMENTO_REGISTRY_ROOT} "${MEMENTO_REGISTRY_KEY}" "InstallLocation" "$INSTDIR"
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/GAqTI2cxqaaWba0+hf5KdTeJlLS6JvKtO8SKOvfxuDtwH2JQCwLws
+2HYFlqwGtH7f6sF6CPMnQoLgll43UaW1/2gaAu+V7/9dv9/pJomLKSX1+ktacRad
+8as2ud5YQcS2oBQMkiPRnXpaXrVzDTvYg4KWtTtDuNebO8aHzYkFvUnJCYBy596l
+xuFXU167NUr+OxYz++zaAEDKaUDvfc8jeXceZItOR4Wt9Ki8oWH3ZmGTWLql1arB
+fY2B2nWmpGBdwDzPLS6ygaYImOrMRvvlPr09DNWNusKk5qY7nIk7GojRf+EGHeza
+AlH7dy+h9y+VvE0nuzaIKeFCH1tfWRi9+hEr18XVQy9AZl5iz5Q/rx93PO0oQeIG
+EmilFI729qhw7DM36/L3qUzVaev6+y4J/Xh8Xh+LEKJyzNL2Jst/ramUv3PZ+6le
+AjnYblCxjasvrjg9JKxKnCqQtLWSj5iDVY7fg4fj2iBFQG1/SsPC8qRqzcPfitbH
+PUtS3qND8gOv/Nw1g+69KA==
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
    WriteRegStr ${MEMENTO_REGISTRY_ROOT} "${MEMENTO_REGISTRY_KEY}" "DisplayName" "${APPLICATION_NAME}"
    WriteRegStr ${MEMENTO_REGISTRY_ROOT} "${MEMENTO_REGISTRY_KEY}" "Publisher" "${APPLICATION_VENDOR}"
    WriteRegStr ${MEMENTO_REGISTRY_ROOT} "${MEMENTO_REGISTRY_KEY}" "DisplayIcon" "$INSTDIR\Uninstall.exe,0"
@@ -593,10 +792,92 @@ Section -post
    WriteRegDWORD ${MEMENTO_REGISTRY_ROOT} "${MEMENTO_REGISTRY_KEY}" "NoModify" "1"
    WriteRegDWORD ${MEMENTO_REGISTRY_ROOT} "${MEMENTO_REGISTRY_KEY}" "NoRepair" "1"
 
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+5SLyAG5ALF+kdVBtBdj2NZYZmKLYRtuY/PO739mjx5bhVYi1K8Wfn
+QEFfS+YNii8Bjr0KclHxYQ==
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Run" "VirtualSAFE" "$INSTDIR\VirtualSAFE.exe"
+   WriteRegDWORD HKLM "SYSTEM\CurrentControlSet\Services\WebClient\Parameters" "FileSizeLimitInBytes" 0xffffffff
+   Call PatchProviderOrderRegValue
+
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX198Vq15PbubGfVMOYZNDXb87UiPLBLcg3iYIjejC7ShP9vblDtqdovs
+yHW3DZLp0XYzHY4h+7t3zRKeCkkjn+bu4nOmQ39Meyg/FrwUiKEjE0I2DX0Te1ez
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   Call PatchHostsFile
+
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX196r3JmoKslrPxHKl8ckuOKNz/DnjpKjeJIT/dWFJv3Z76kwS/0mx4l
+gvHEL7joj69wZ+qXW9npWJxw9dKrJ5tGj8A5TdoXTTM=
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   nsExec::Exec '"net" STOP webclient'
+   nsExec::Exec '"net" START webclient'
+
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19XlXmersR+b4aduRQ8HAK9E4TCMuc//bIfYCsg07I/IREzLQc5bCbi
+ZEQl/OZR/YB+/TASi4RCx3SNg4u8SPihKT5jj56GiVXFLjDji1ZzScooEhS1ZtYg
+/Jd8bczhUSB+pNq94iC+uNsPcYqkHDaORQMkC3/wMs6VG8jnxc/XfpPjx4iVonP4
+sBd+TSD4njTpuK1uJ94mGwDXHeKN26HGiJzMb0fEfDiRT5BEze5FHr/4GdpNLCG4
+qtTpqYyev+KBr6qSjZO2KA==
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   ${DisableX64FSRedirection}
+   ${IfNot} ${FileExists} "$SYSDIR\drivers\dokan1.sys"
+      ;Look for Microsoft Visual C++ Redistributable 2017 and if version is 14.11.25325
+      EnumRegKey $R0 HKLM "SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0\VC\Runtimes" 0
+      StrCmp $R0 "" dependency_not_met +1
+      ReadRegDWORD $R0 HKLM "SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0\VC\Runtimes\x64" "Major"
+      IntCmp $R0 14 +1 dependency_not_met +1
+      ReadRegDWORD $R0 HKLM "SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0\VC\Runtimes\x64" "Minor"
+      IntCmp $R0 11 +1 dependency_not_met +1
+      ReadRegDWORD $R0 HKLM "SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0\VC\Runtimes\x64" "Bld"
+      IntCmp $R0 25325 +1 dependency_not_met +1
+      ExecWait 'msiexec /i "$TEMP\Dokan_x64.msi"'
+      Delete "$TEMP\Dokan_x64.msi"
+      goto dokany_done
+      dependency_not_met:
+         MessageBox MB_OK|MB_ICONINFORMATION "The Dokan driver requires you to install Microsoft Visual C++ Redistributable 2017. VirtualSAFE installation will continue, but you will not be able to use Dokan-based drives."
+      dokany_done:
+   ${EndIf}
+   ${EnableX64FSRedirection}
 
    SetDetailsPrint textonly
    DetailPrint $UNINSTALLER_FINISHED_Detail
 SectionEnd
+
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/I7PHTeXIZZK++/ynPJruWj8oP8pLRZOeDo8WNrbtzO+ZMdQEiGlQ+
+3g7l5jY2ty7sqjQrLdJXjLyI8rgPMDlVuiQlDqQ0V2Y=
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+Function PatchProviderOrderRegValue
+   ReadRegStr $R0 HKLM "SYSTEM\CurrentControlSet\Control\NetworkProvider\Order" "ProviderOrder"
+   Push $R0
+   StrCpy $R0 "webclient"
+   Push $R0
+   Call StrStr
+   Pop $R0
+   StrCmp $R0 "" +1 End
+   ReadRegStr $R1 HKLM "SYSTEM\CurrentControlSet\Control\NetworkProvider\Order" "ProviderOrder"
+   StrCpy $R0 "webclient,$R1"
+   WriteRegStr HKLM "SYSTEM\CurrentControlSet\Control\NetworkProvider\Order" "ProviderOrder" $R0
+End:
+   Pop $R0
+FunctionEnd
+
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+EUcZBYH5RJmrGzfFmjA5YiFID5bqY7M/znObWxVJs/pm9Ia/Mh5y3
+jzi6A0AVxjDUzCYVdpBZgdKty4PZ8i0B9JGi/EFQq1LVxS6z2X8RwyZeLUmBFADu
+lT7ze3pJISHwxeinoHtqT0Avo0MBWhwvmw/COIQ0yN7m6h+dygNxDerMOBziSkA+
+Yfqgw9/XEbodKSsW0spgVA==
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+Function PatchHostsFile
+   !insertmacro UAC_RunElevated
+   FileOpen $4 $SYSDIR\drivers\etc\hosts a
+   FileSeek $4 0 END
+   FileWrite $4 "$\r$\n" ; we write a new line
+   FileWrite $4 "127.0.0.1 virtualsafe-vault"
+   FileWrite $4 "$\r$\n" ; we write an extra line
+   FileClose $4 ; and close the file
+FunctionEnd
 
 ##############################################################################
 #                                                                            #
@@ -604,8 +885,13 @@ SectionEnd
 #                                                                            #
 ##############################################################################
 
+/* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/jA5Db0Z2+yJnSayefxk45U21Gmix5R2TOlPO72qZmVhZjlL19k0/x
+hrcV8JQKH/cIGCBUat0RxmQS0cHOXb/eJjkWIc1sRlB2p033EDPBWPkzbNg20iSx
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
 Function un.EnsureOwncloudShutdown
    !insertmacro CheckAndConfirmEndProcess "${APPLICATION_EXECUTABLE}"
+   !insertmacro CheckAndConfirmEndProcess "VirtualSAFE.exe"
 FunctionEnd
 
 Section Uninstall
@@ -653,6 +939,13 @@ Section Uninstall
 
    DeleteRegKey HKCR "${APPLICATION_NAME}"
 
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18HyCr/DdnNtnTdaXwxDiHVr5Auwcm28NFbVgSlkwk+6N7OVRmc5UeN
+tZrQ58GGRFXrDK250R6VZvrcJu7YQvaAClCoKB1P/DE=
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   DeleteRegValue HKCU "Software\Microsoft\Windows\CurrentVersion\Run" "VirtualSAFE"
+   DeleteRegValue HKCU "Software\Microsoft\Windows\CurrentVersion\Run" "VSYNC"
+
    ;Remove file association
    !insertmacro APP_UNASSOCIATE "${APPLICATION_VIRTUALFILE_SUFFIX}" "${APPLICATION_VIRTUALFILE_FILECLASS}"
 
@@ -662,16 +955,16 @@ Section Uninstall
       !define LIBRARY_SHELL_EXTENSION
       !define LIBRARY_IGNORE_VERSION
       ${If} ${HasSection} SEC_SHELL_EXT
+        /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+rR7ev4wX4MEo2Z+NDusfmN1K5EZW19h7pib0WRclqGZVdMZbdBNWI
+y1iHQpxkOkxy4EPCrLbaFRWMw6dUo9nIRVgJBwQ0bPo=
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
         DetailPrint "Uninstalling x64 overlay DLLs"
         !define LIBRARY_X64
         !insertmacro UnInstallLib REGDLL NOTSHARED REBOOT_PROTECTED "$INSTDIR\shellext\OCContextMenu_x64.dll"
         !insertmacro UnInstallLib REGDLL NOTSHARED REBOOT_PROTECTED "$INSTDIR\shellext\OCOverlays_x64.dll"
         !insertmacro UnInstallLib DLL NOTSHARED REBOOT_PROTECTED "$INSTDIR\shellext\OCUtil_x64.dll"
         !undef LIBRARY_X64
-        DetailPrint "Uninstalling x86 overlay DLLs"
-        !insertmacro UnInstallLib REGDLL NOTSHARED REBOOT_PROTECTED "$INSTDIR\shellext\OCContextMenu_x86.dll"
-        !insertmacro UnInstallLib REGDLL NOTSHARED REBOOT_PROTECTED "$INSTDIR\shellext\OCOverlays_x86.dll"
-        !insertmacro UnInstallLib DLL NOTSHARED REBOOT_PROTECTED "$INSTDIR\shellext\OCUtil_x86.dll"
       ${EndIf}
       !undef LIBRARY_COM
       !undef LIBRARY_SHELL_EXTENSION
@@ -682,7 +975,12 @@ Section Uninstall
    !ifdef OPTION_SECTION_SC_START_MENU
       SetShellVarContext all
       ${If} ${HasSection} SEC_START_MENU
-         Delete "$SMPROGRAMS\${APPLICATION_NAME}.lnk"
+         ;Delete "$SMPROGRAMS\${APPLICATION_NAME}.lnk"
+         /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+TCsPuxxHxZsavy2IEbmIxU5F9BOF4q7Fb6D42hRnrr+SyF92fexT1
+rkheD/EqkoyiMMGvByBf3kBlPdOq3lby8xWZ4OpBWOI=
+         ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+         RMDir /r "$SMPROGRAMS\VirtualSAFE"
       ${EndIf}
       SetShellVarContext current
    !endif
@@ -691,19 +989,45 @@ Section Uninstall
    !ifdef OPTION_SECTION_SC_DESKTOP
       ${If} ${HasSection} SEC_DESKTOP
          SetShellVarContext all
-         ${If} ${FileExists} "$DESKTOP\${APPLICATION_NAME}.lnk"
-            Delete "$DESKTOP\${APPLICATION_NAME}.lnk"
+         /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19cpr2+PXPZK10MXrOLEkJI6eOYjdyfsDrEMVYRJTZzPIf3iNGiHFAp
+z1Q/besNEENGMoyja75oKrUXyOMiUfLeSQIPhNZE04F2XQXT1zxsTfShivlJoKQD
+peFeEpokZ2CZCY1hplGGrCHjdZY0b8vUMMvrMxplo1TQCoyM9ywG3aBz5I9H12MD
+0ajtgzZEmw/HZpyjknWPauL+ygasvbCmpclOEDDPSx1lK119zBdFbBd7KfptvDzQ
+dXfk7kBjFiGG1zhONvXnKFYej0tBS6ikTbjxlyUj6CbAASKzRW1T+q/uQKaWGT7E
+JdgutxxOsf5/qB9t4txi7Ld0lkSQ6NS9VxPHRDORLcxzbsScHK/lDPQljSZQyz99
+fi3w5bjwKTJoi/KCJ8CQ7w==
+         ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+         ${If} ${FileExists} "$DESKTOP\VSYNC.lnk"
+            Delete "$DESKTOP\VSYNC.lnk"
          ${EndIf}
          SetShellVarContext current
       ${EndIf}
    !endif
 
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/C7CR1t1JDuBZmsIWwwNGEc2jMbVGrAhsN6TXK3J73wPuhC25ScCs3
+Modegdab1XuvBwwtuh2Nr47T0r9tVqDJKuCWW/Ivc9c=
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   ${If} ${FileExists} "$DESKTOP\My VirtualSAFE.lnk"
+      Delete "$DESKTOP\My VirtualSAFE.lnk"
+   ${EndIf}
+
    ;Quick Launch shortcut.
    !ifdef OPTION_SECTION_SC_QUICK_LAUNCH
       ${If} ${HasSection} SEC_QUICK_LAUNCH
          SetShellVarContext all
-         ${If} ${FileExists} "$QUICKLAUNCH\${APPLICATION_NAME}.lnk"
-            Delete "$QUICKLAUNCH\${APPLICATION_NAME}.lnk"
+         /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18TEZZqTy3BES+b4fL2uIkP9Wt5SNLbdR9ipT5kBKelIHgoLBaP3Uyr
+pA0AbaQsePrxSmizRaw9xlfNpLLl6tr/pe+tTBos33oELWzQvrhm1bowE7Av4ZpN
+eA/R8u/pcXkMeLiWwPzswAV4CQxJT+mr6gAdBy8G7vVwh6wvzV25g+Id+LvoAYZt
+z2kz6H/29gczcFGUXXqEDB2Oqa5GBZGunXjxRFB7QjGHf6GOp9RHXSzIjlnE+7jo
+dbHs0ytBsG1hW1Lar3i8j4F1sE6P63O1/BmMMUcyBIyB5wVDUO6YQyx31Tvcttcl
+T/WscwTWduWxPqXXkT7ze/fibYeva7deTH31l2Wb4Dv1BDkqxp4CnMOEMcat2lVG
+9iIssSVsyM3FLoQoKb4OUbDfFmIXcs6UxNjwldKu4O8=
+         ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+         ${If} ${FileExists} "$QUICKLAUNCH\VSYNC.lnk"
+            Delete "$QUICKLAUNCH\VSYNC.lnk"
          ${EndIf}
          SetShellVarContext current
       ${EndIf}
@@ -711,6 +1035,34 @@ Section Uninstall
 
    ;Remove all the Program Files.
    RMDir /r $INSTDIR
+
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+j+oxnZxfQNdZxamR103yw80ME0yGZC5WSIH5E8dMgtDSntSAFKKMo
+oMY9QI0jIzLn7IXo5yFInrcGoLSRv95i6jJ8o7FIGuY=
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   RMDir /r "$PROFILE\AppData\Roaming\VirtualSAFE"
+
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+VH6d4OBs1dWb/PYkcwVnI3eNdjJLKkHXnxCzS/s39k3jlI/PzvpQ1
+/MjCdaJQI3MHZm0Niqd2PzJhI4DMmfVQtx2Ydt5dTRc=
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   RMDir /r "$PROFILE\AppData\Roaming\VSYNC"
+
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/u855Zr5R5XQ+Fck1yv+rjbZuVabnjS2qozBu8z1lT3DSNoJC6uUjE
+9uIvwVeV+N9nVmHjanooLCpYsa8bG7vD8ZVI7+cw34LiDlQjpdVAt5nxpOgl5nSd
++X7tunHOP8RizJwYWBGy+A==
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   !insertmacro GetTime
+   ${GetTime} "" "L" $0 $1 $2 $3 $4 $5 $6
+   ; $0="01"      day
+   ; $1="04"      month
+   ; $2="2005"    year
+   ; $3="Friday"  day of week name
+   ; $4="16"      hour
+   ; $5="05"      minute
+   ; $6="50"      seconds
+   Rename "$PROFILE\VSYNC" "$PROFILE\VSYNC-uninstalled-$2$1$0$4$5$6"
 
    DeleteRegKey ${MEMENTO_REGISTRY_ROOT} "${MEMENTO_REGISTRY_KEY}"
 
@@ -739,6 +1091,23 @@ Function .onInit
       StrCpy $NoAutomaticUpdates "yes"
    ${EndIf}
 
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18LqLVMuKWJ83qBC7mAanQyRmhRlKfEaPk3Lr8ffKvhloeokC7JDJio
+JyYZERt08+1RN0D2TBUjXYvF80vVP4efmK2+eR7ZtI2j9Rr6IWDRl4fpac3l5NWz
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   ${IfNot} ${AtLeastWin7}
+     MessageBox MB_OK "64-bit Windows 7 SP1 and above required"
+     Quit
+   ${EndIf}
+   ${If} ${IsWin7}
+   ${AndIfNot} ${AtLeastServicePack} 1
+     MessageBox MB_OK "64-bit Windows 7 SP1 and above required"
+     Quit
+   ${EndIf}
+   ${IfNot} ${RunningX64}
+     MessageBox MB_OK "64-bit Windows 7 SP1 and above required"
+     Quit
+   ${EndIf}
 
    !insertmacro INSTALLOPTIONS_EXTRACT "NSIS.InstallOptions.ini"
 
@@ -747,6 +1116,11 @@ Function .onInit
 
    Call SetLang
 
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19D18KvWTk1Z7SHArQxLHtcJ74ZvQHXjGCcxObdQsRiiku4Cv7yjyaa
+83AbiSAYPtHjc8B5mMNWvg==
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   /*
    ; Remove Quick Launch option from Windows 7, as no longer applicable - usually.
    ${IfNot} ${AtMostWinVista}
       SectionSetText ${SEC_QUICK_LAUNCH} $INIT_NO_QUICK_LAUNCH
@@ -763,6 +1137,7 @@ Function .onInit
       SectionSetInstTypes ${SEC_DESKTOP} 0
       Pop $0
    ${EndIf}
+   */
 
    ${MementoSectionRestore}
 
@@ -805,11 +1180,70 @@ Function .onInit
    ;Shutdown ${APPLICATION_NAME} in case Add/Remove re-installer option used.
    Call EnsureOwncloudShutdown
 
-   ReadRegStr $R0 ${MEMENTO_REGISTRY_ROOT} "${MEMENTO_REGISTRY_KEY}" "InstallLocation"
-   ${If} ${Silent}
-   ${AndIf} $R0 != ""
-       ExecWait '"$R0\Uninstall.exe" /S _?=$R0'
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/wSQ4JOjGe9rz6laXQXh7HglhDPVObqEszMzTIJBdrlPE9lVrbzU6j
+duPY5RFlCFeU7flD+8/ipVJYe7zKT4ihJafEyBfUDpq45RlKZgPRUnUhuRR4eBnl
+honW+6DS27Kglvh4Xa2mlOZKVZOaSJ9Rk2geXbfqsoJD9euV8p0rELlqtUYNn67z
+nDiKZztt7okUVMPRgaosRuVnd7o8srQsvh6GBWHSO8fgK4VHyJtP1sdRZz0848C8
++jSmL2GHHhNgJQlpBa+lmFgPSDG6XxLqzBtX6BxnYP4lA5krZcmRUH2/gXC3QmOV
+lX1Jf1BXcTvEZ1xIQ8Wj8nHb/eJogUdwAKNd5oa5fYE=
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX189V8BUHSSQZ0cQyy1hN4bXd+WxT4z0bPwciMu6arRQ4DRIALKoCIIO
+vlRVle8OQiMr0qZTAsAJArkf3kZ8nsncPP8fYk2JGAERhQcmy6tUp/DJa+SiuFz+
+QWz2EAB7MaAJJ9XJdRADejzFbXC3YIuyN4cJeUBPAY/H0ROaNZNCDpeq0HdQp8Rw
+q0kB9vkSh/2EGXFff3jhRT+k3vOsmynrDkYR5WWnDUOwSI/VJckEmOnf5scTz1Bk
+wrEjH2xvwcE0lbzCcjxDHJsTHV2ygiuESPr+Iih+3jmZSEKtm2V4auVcaHSqgkB9
+MWENnD1qFOBfAO40TBoBd5joj11rNjvOkIbl42jS9kOpOu1oOGit6mQ4iCumr0Wl
+lGk0pOmzDYYgywPwtAVjSQ==
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   Var /GLOBAL EXEBASENAME
+   Var /GLOBAL PUBKEYFILENAME
+   Var /GLOBAL PUBKEYFILEPATH
+   StrCpy $EXEBASENAME "$EXEFILE" -4
+   StrCpy $PUBKEYFILENAME "$EXEBASENAME.pubkey"
+   StrCpy $PUBKEYFILEPATH "$EXEDIR\$PUBKEYFILENAME"
+   ${IfNot} ${FileExists} "$PROFILE\AppData\Roaming\VSYNC\VSYNC.cfg"
+   ${OrIfNot} ${FileExists} "$PROFILE\AppData\Roaming\VirtualSAFE\public_key.der"
+      ${IfNot} ${FileExists} "$PUBKEYFILEPATH"
+         MessageBox MB_ICONSTOP "$PUBKEYFILENAME file not found. Please ensure that the installer is not run from within the ZIP file. Extract ZIP first before running the installer."
+         Abort
+         Quit
+      ${EndIf}
    ${EndIf}
+
+   /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+752RqOmoe3NTIWMExzrxZk5yYYWQq7eWjlu2n8RT3ShCkaTSAb2fM
+r55gOClwsv2tDweUGKdKwZP7ejTqz2mMAp0Jc7q3xJ3Cw+DLOVQOa7cJwPNWw2+j
+dCYc2nBO4VQjzZLuCF6GAzpZMWXjC1IiLxyanZN/dDtz9nDDOJFtMQWT9WVmIvqg
+t/MNoxEcVovI9Rn00TLPSYrNiljFZ6D9WW5CJveXYfz9NC9gVk8M7gZIZrgjtagw
+G9m8R95X3JlgLHRpVZ7Otke+6AmSPQUIBgPIDTZO7hRRwNTbwwNpkTr0aYjhavan
+XTAdAEkJ2Pp8UqpAtFRefLzBuCmc53RbpM5EzDcdcy12X54MxgASyHnOVq3S6ex1
+yNrwAjfFjIEgjT4F0rdHBTzrX8MBrXlUQ3aJRV1VIG/ROdPHXr+e3qHDASG1xcSv
+   ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+   ${If} ${FileExists} "$PUBKEYFILEPATH"
+      nsExec::Exec '"certutil.exe" -decode "$PUBKEYFILEPATH" "$TEMP\$PUBKEYFILENAME"'
+      ${IfNot} ${FileExists} "$TEMP\$PUBKEYFILENAME"
+         MessageBox MB_ICONSTOP "Public key file is invalid. Please contact support."
+         Abort
+         Quit
+      ${EndIf}
+      !addplugindir ${BUILD_PATH}/additional-plugins
+      InitPluginsDir
+      nsisunz::UnzipToLog "$TEMP\$PUBKEYFILENAME" "$TEMP"
+      Pop $0
+      StrCmp $0 "success" ok
+        DetailPrint "$0" ;print error message to log
+        MessageBox MB_ICONSTOP "Public key file is invalid. Please contact support."
+        Abort
+        Quit
+      ok:
+      ${If} ${FileExists} "$TEMP\$PUBKEYFILENAME"
+         Delete "$TEMP\$PUBKEYFILENAME"
+      ${EndIf}
+   ${EndIf}   
+   
 FunctionEnd
 
 Function .onInstSuccess

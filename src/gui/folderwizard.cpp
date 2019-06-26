@@ -70,7 +70,11 @@ FolderWizardLocalPath::FolderWizardLocalPath(const AccountPtr &account)
     QUrl serverUrl = _account->url();
     serverUrl.setUserName(_account->credentials()->user());
     QString defaultPath = QDir::homePath() + QLatin1Char('/') + Theme::instance()->appName();
-    defaultPath = FolderMan::instance()->findGoodPathForNewSyncFolder(defaultPath, serverUrl);
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/p8sXITUYQMtyOXtd6wOLf85qBGv73NBjnEE0D2GhpiA0yYBtFai4V
+38bLZMKmmTILhNm6WutcLvb6nWv8eZKKipKrii7qcZk=
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    //defaultPath = FolderMan::instance()->findGoodPathForNewSyncFolder(defaultPath, serverUrl);
     _ui.localFolderLineEdit->setText(QDir::toNativeSeparators(defaultPath));
     _ui.localFolderLineEdit->setToolTip(tr("Enter the path to the local folder."));
 

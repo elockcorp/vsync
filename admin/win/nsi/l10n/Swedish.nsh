@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Detta avinstallationsprogram  kräver adm
 StrCpy $UAC_ERROR_LOGON_SERVICE "Login-service körs inte, avbryter!"
 StrCpy $INIT_UNINSTALLER_RUNNING "Avinstallationsprogrammet körs redan."
 StrCpy $SectionGroup_Shortcuts "Genvägar"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Vänligen låsa valv för att förhindra dataförlust. Klicka på Försök igen när du har gjort det."

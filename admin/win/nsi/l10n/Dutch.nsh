@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Deze uninstaller vereist Beheerderstoegan
 StrCpy $UAC_ERROR_LOGON_SERVICE "De aanmeldprocedure is niet actief; er wordt afgebroken!"
 StrCpy $INIT_UNINSTALLER_RUNNING "De uninstaller is al gestart."
 StrCpy $SectionGroup_Shortcuts "Snelkoppelingen"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Gelieve lock kluis om data corruptie te voorkomen. Klik op Opnieuw als je dit hebt gedaan."

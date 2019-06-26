@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "卸载程序需要管理员权限，请�
 StrCpy $UAC_ERROR_LOGON_SERVICE "登录服务器未运行！"
 StrCpy $INIT_UNINSTALLER_RUNNING "卸载程序已经运行。"
 StrCpy $SectionGroup_Shortcuts "快捷方式"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "请锁定跳马，以防止数据损坏。点击重试，当你已经这样做了。"

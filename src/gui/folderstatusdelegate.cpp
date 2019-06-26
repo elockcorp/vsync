@@ -337,6 +337,11 @@ void FolderStatusDelegate::paint(QPainter *painter, const QStyleOptionViewItem &
     painter->restore();
 
     {
+        /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+q0T4/unMP72ZK/WgMryz957hLOCA2Op4acPfMvTXXrv693aVbBaUk
+7+Zu4ZyOc96L0pig7YXYW9MsqfAh4HkqcyDOTO/pSi8=
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+        /*
         QStyleOptionToolButton btnOpt;
         btnOpt.state = option.state;
         btnOpt.state &= ~(QStyle::State_Selected | QStyle::State_HasFocus);
@@ -348,6 +353,7 @@ void FolderStatusDelegate::paint(QPainter *painter, const QStyleOptionViewItem &
         int e = QApplication::style()->pixelMetric(QStyle::PM_ButtonIconSize);
         btnOpt.iconSize = QSize(e,e);
         QApplication::style()->drawComplexControl(QStyle::CC_ToolButton, &btnOpt, painter);
+        */
     }
 }
 

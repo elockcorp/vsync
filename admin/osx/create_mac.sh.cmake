@@ -23,7 +23,13 @@ identity="$3"
 prjfile=$build_path/admin/osx/macosx.pkgproj
 
 # The name of the installer package
-installer="@APPLICATION_SHORTNAME@-qt@Qt5Core_VERSION@-@MIRALL_VERSION_FULL@@MIRALL_VERSION_SUFFIX@"
+: ' ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+NUYQxEa8+BpsbTp99RgF2r4PH6UFqNYXX1/xFkjDZKq8nu4DO55G5
+/k/8WZ3XpbQpvwLDzx9NJHWfEA2x04SnIrnyiuPcAkDsqMPeIccujo8xhRtFNmy8
+plTTkNhd+mjnQqxdCHihbgIusnbEiFcKxdTNf6sbp1Y1PxBxtE/CQDkHc5ps0Ppl
+1REARNrtiNYmENn83qzlYcXJmaVz8qjK6pze2e9g/46WXDtRLrXdXb0oezD/SkLj
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### '
+installer="VirtualSAFE-Installer"
 installer_file="$installer.pkg"
 installer_file_tar="$installer.pkg.tar"
 installer_file_tar_bz2="$installer.pkg.tar.bz2"
@@ -45,10 +51,14 @@ else
   exit 3
 fi
 
+: ' ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19c1n6kiIuoA4mMDYXaeAtNVoHm7I4q8MMZhU0eLRyUOXo6yw9Re8bE
+Q97Js2AncrSr7e8td3w/JB3bSJGpydetTT604go4Amk=
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### '
 # Sign the finished package if desired.
 if [ ! -z "$identity" ]; then
 	echo "Will try to sign the installer"
-	pushd $install_path
+	pushd ../install
 	productsign --sign "$identity" "$installer_file" "$installer_file.new"
 	mv "$installer_file".new "$installer_file"
 	popd
@@ -59,6 +69,12 @@ fi
 # FIXME: OEMs?
 # they will need to do their own signing..
 
+: ' ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX195opPy2KSsd0f7BKR/AN7Pxt5p+CGtiAABB8BfM6tKecssJCuMvcgI
+szCT5hX1dEbr1wZ3W7ltkNl4ppO0xjcYM31l90rE7lDrEylLQxFgg00ZCwN/BNr6
+xY4HaiVW8zDh8y/PsIC9hgJmMwZAiK46AhK8Ro3bszE7r4rCZBxXLe6XHwu1kkoU
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### '
+cp ../install/$installer_file $install_path/
 
 # Sparkle wants a tbz, it cannot install raw pkg
 cd $install_path

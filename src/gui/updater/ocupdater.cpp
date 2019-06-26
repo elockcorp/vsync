@@ -104,7 +104,12 @@ bool OCUpdater::performUpdate()
     QString updateFile = settings.value(updateAvailableC).toString();
     if (!updateFile.isEmpty() && QFile(updateFile).exists()
         && !updateSucceeded() /* Someone might have run the updater manually between restarts */) {
-        const QString name = Theme::instance()->appNameGUI();
+        /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX180uZv31RAzovL5kJludnM5va2OdNvVSvZ5FApkk2pNGUhl0QBnLtd2
+z06zM9GEd+uYSp2Q3JdMm61rsvHjqTUfN61r2q1nAmZQHVQInf9VtrSMyICoIayW
+CmNd60Y6dVa84BelYoYuWFeNc/lhY5c2AP3vOuq6lWpMczCXnr6rO4EjBzDUFcCO
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+        const QString name = "VirtualSAFE";
         if (QMessageBox::information(0, tr("New %1 Update Ready").arg(name),
                 tr("A new update for %1 is about to be installed. The updater may ask\n"
                    "for additional privileges during the process.")
@@ -147,13 +152,28 @@ QString OCUpdater::statusString() const
     case Downloading:
         return tr("Downloading version %1. Please wait...").arg(updateVersion);
     case DownloadComplete:
-        return tr("%1 version %2 available. Restart application to start the update.").arg(Theme::instance()->appNameGUI(), updateVersion);
+        /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+uTIQtaMQYKX6zHEkv2sqljOqWoWW/O0brlZd3CN+yRwO23t+X5XFu
+QnWF+1s81wQk+nNE8On9gBsabdZCgadLmz/HNMHDjFMy8qjhXePti6ucQbcN+dSW
+yfkQaL98iHcR7BV4q70nXUK8OdyrfPIILOGBS4SvWzDljo1MQ27IWXqk09Jfj5v8
+TJFM7E6Qbo6Kj/zH7RZJFw9J8N/iZVvhOXAuicp/yZJHrBiB5IvlG87ElHzCzAT4
+zRcfKc+Qd/vbhVkUpg8DGyNshU1kGfZsE2jA/GfE7pPonUEUdWIFNzZnBSMeIv6i
+xdcA2QyrmAj0B3QpRdJFCg==
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+        return tr("%1 version %2 downloaded and ready to install.").arg("VirtualSAFE", updateVersion);
     case DownloadFailed:
         return tr("Could not download update. Please click <a href='%1'>here</a> to download the update manually.").arg(_updateInfo.web());
     case DownloadTimedOut:
         return tr("Could not check for new updates.");
     case UpdateOnlyAvailableThroughSystem:
-        return tr("New %1 version %2 available. Please use the system's update tool to install it.").arg(Theme::instance()->appNameGUI(), updateVersion);
+        /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/QmwCE+bnMjJBBfalI+56/dajue9a5kNUWr5K2MNAda+emxUr9HyVv
+sRHwSvwWYjFPFCf9TeS88WnfK7dmSYPQLW3AkEyNEN4fmM4nXzItVzxQxxJgioAH
+VRWs6IrzA0jYMnRbqgvvbSQ3NCLAjJbFKOxgmV2945INMjW9Ig3GBBodLRUnqWEM
+aLNAzxOxW8crC6XuFb25nj0dXxoiGVou5X/AVin0R9tNLaKzbh2HK6pewtHrV/Ja
+AvYJaSQw9T85fV1jF+W+9Y9aEzCA8EVVtbHmWAdRscpvNtlZ4RM9zyCOluN9xEwU
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+        return tr("New %1 version %2 available. Please use the system's update tool to install it.").arg("VirtualSAFE", updateVersion);
     case CheckingServer:
         return tr("Checking update server...");
     case Unknown:
@@ -193,9 +213,21 @@ void OCUpdater::slotStartInstaller()
     settings.sync();
     qCInfo(lcUpdater) << "Running updater" << updateFile;
 
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+/1R00FAJe8OHBgpVXm7MjAOvG67VmknPUwIqi3kMtorfHh88BaPrj
+ayGvZBz4cz6m6Gw7/6BsG2IIN4P/CqLCiWyzmBWTyW2t6P+0aU8uWcHj6PnaFc+R
+r/ujq5Eie2J2Oc66Y55pXrOh3mapnlxLE33c03tSMVo=
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
     if(updateFile.endsWith(".exe")) {
         QProcess::startDetached(updateFile, QStringList() << "/S"
                                                           << "/launch");
+    } else if(updateFile.endsWith(".pkg")) {
+        QProcess::startDetached("osascript", QStringList() << "-e"
+                                                           << "set ss to \"installer -pkg \'"+updateFile+"\' -target /\""
+                                                           << "-e"
+                                                           << "do shell script ss with prompt \"VirtualSAFE update requires administrative access\" with administrator privileges");
+    }
+    /*
     } else if(updateFile.endsWith(".msi")) {
         // When MSIs are installed without gui they cannot launch applications
         // as they lack the user context. That is why we need to run the client
@@ -216,6 +248,7 @@ void OCUpdater::slotStartInstaller()
 
         QProcess::startDetached("powershell.exe", QStringList{"-Command", command});
     }
+    */
 }
 
 void OCUpdater::checkForUpdate()
@@ -307,10 +340,28 @@ void NSISUpdater::slotDownloadFinished()
     }
 
     QFile::copy(_file->fileName(), _targetFile);
+
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18U1gP6BP0l+LHTa7qwcYCOpX0i0DzNJM2Tp7i+su7DMK+rT7ukk1bi
+8U8htsvzPuNh45nXgReke43Oz5plhrRSUEQRZe366KndzaEoz0Qjkw5cghjMkwER
+R+/kjr7mZguCo85IRW6cdmhMo84nIiHpxYxbxYfmxQZuRG3BkZu7TxneNHRa7vVZ
+QlCUK/S/RZrcwOsLufqx/x2gVh7OTWARs41nmnLCsyhJgyByribVJHKoQZf4s5Gm
+oYXbjihYAu9X6svkXhaT1A==
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    if (!QFile(_targetFile).exists()) {
+        setDownloadState(DownloadFailed);
+        return;
+    }
+
     setDownloadState(DownloadComplete);
     qCInfo(lcUpdater) << "Downloaded" << url.toString() << "to" << _targetFile;
     settings.setValue(updateTargetVersionC, updateInfo().version());
     settings.setValue(updateAvailableC, _targetFile);
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX192jZPIBT7Lq7eGUNJN4SJfBv/Oc/v9AQmtKT7OVn4guwU4pNP+QvJs
+8+eHeDwmjW2NsCr74MqRZZKmlE4JEOzSATYzJZOtOTk=
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    performUpdate();
 }
 
 void NSISUpdater::versionInfoArrived(const UpdateInfo &info)
@@ -320,6 +371,13 @@ void NSISUpdater::versionInfoArrived(const UpdateInfo &info)
     qint64 infoVersion = Helper::stringVersionToInt(info.version());
     qint64 seenVersion = Helper::stringVersionToInt(settings.value(seenVersionC).toString());
     qint64 currVersion = Helper::currentVersionToInt();
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/y077zof70Ws4L9hwJSkKXI7VXCmIK+DxxSnEdQS53PDdqOsVXOdZy
+GNYmN1RpLH3sv3DqQU64rQ==
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    qCInfo(lcUpdater) << "infoVersion:" << infoVersion << info.version();
+    qCInfo(lcUpdater) << "seenVersion:" << seenVersion << settings.value(seenVersionC).toString();
+    qCInfo(lcUpdater) << "currVersion:" << currVersion << Utility::escape(clientVersion());
     if (info.version().isEmpty()
         || infoVersion <= currVersion
         || infoVersion <= seenVersion) {
@@ -370,9 +428,20 @@ void NSISUpdater::showDialog(const UpdateInfo &info)
     ico->setFixedSize(iconSize, iconSize);
     ico->setPixmap(infoIcon.pixmap(iconSize));
     QLabel *lbl = new QLabel;
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+UFgCiSaEfZ98cCdURCX9ls02YCk4OU8CalpQ+4UUuEQ1iNGTCOMzl
+zWUQT3rWxkFjv3GPNo8tkTXTMLGxWfERG7zXn+rkXPaJWetY3bktBD9BWsndCG4Z
+cIB7lHVtle0hRz4lIbERD6eoLUhPKS+p/Agi5iwTG6cxsjJBRMETeXmEcw19r/3m
+DQXs1woj6oKAFgDO2eq2yQkRo5Kv+jSCy1ijlmG1G2973YsffrVVAAlPla2F5xDb
+4Mctoq4zA0AM9x9vgEcSqUr6l7XeUO9mIvnNzsZwbMTeM3v8+ue+fYoyio7FB967
+Da7Rdj29JuWxq4hk8p+JFmjaBtLR6Mrm/mcrspoHYZHz7fSHpK/uzj1PvwzyMzro
+y4MvMCg41lI3fnIpgm2t1/ewYI5DJoZDYlx1Hxv6Z/f0gD5y6byJzdmzOKY5yBTn
+og4pCYNK5y9M2YypDAnqs31hCdbY6DldFdUi9VuJAtZy6+XtylyCIVy2u31/89Xc
+UjBhtm67QkQewEBTrRW809wvkohdGibsNLoiGql+kt3QPdf1UZJzcGcIoNYaiTe6
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
     QString txt = tr("<p>A new version of the %1 Client is available.</p>"
                      "<p><b>%2</b> is available for download. The installed version is %3.</p>")
-                      .arg(Utility::escape(Theme::instance()->appNameGUI()),
+                      .arg(Utility::escape("VirtualSAFE"),
                           Utility::escape(info.versionString()), Utility::escape(clientVersion()));
 
     lbl->setText(txt);

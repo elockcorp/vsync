@@ -306,6 +306,22 @@ void AccountState::slotInvalidCredentials()
     if (isSignedOut() || _waitingForNewCredentials)
         return;
 
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+0iLE0AVzEWtt++Tb5P83lrGAq35Z/8LyB5zeRbTk/UWOon5i/Jrdy
+gLTrKDTc86Z5ETul0EyQlLdU7QbJ5PMQYYv5YwS3sWtvVgxJrfGPoy+4K0KNudo3
+jgB5WiTCSP+D/5gfHf9zEA==
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    setState(Disconnected);
+    qCInfo(lcAccountState) << "Invalid credentials for" << _account->url().toString()
+                           << "disconnecting user";
+    return;
+
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+baj9ETutyrpbIsjX7z18FC3geezvz/7SAgl210PgXxdY+90Dg702V
+pcO5ZLbiIl83Fvujf71sDVQ/D6koH+l+CPsIVQc7yumPIXVnxtyTD3N6Rp+tA3wc
+L9DGu1gD7cNmH4AYeZAkGQ==
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     qCInfo(lcAccountState) << "Invalid credentials for" << _account->url().toString()
                            << "asking user";
 
@@ -320,6 +336,7 @@ void AccountState::slotInvalidCredentials()
             return;
     }
     account()->credentials()->askFromUser();
+    */
 }
 
 void AccountState::slotCredentialsFetched(AbstractCredentials *)

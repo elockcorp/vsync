@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Avinstallasjonsprogrammet krever administ
 StrCpy $UAC_ERROR_LOGON_SERVICE "Påloggingstjenesten kjører ikke, avbryter!"
 StrCpy $INIT_UNINSTALLER_RUNNING "Avinstallasjonsprogrammet kjører allerede."
 StrCpy $SectionGroup_Shortcuts "Snarveier"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Vennligst låse hvelvet for å hindre ødeleggelse av data. Klikk Prøv igjen når du har gjort det."

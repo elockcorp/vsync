@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "This uninstaller requires admin access, t
 StrCpy $UAC_ERROR_LOGON_SERVICE "Logon service is not running, aborting!"
 StrCpy $INIT_UNINSTALLER_RUNNING "The uninstaller is already running."
 StrCpy $SectionGroup_Shortcuts "Shortcuts"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Please lock vault to prevent data corruption. Click Retry when you have done so."

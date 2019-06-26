@@ -52,6 +52,11 @@
         </property>
        </widget>
       </item>
+      <!-- ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19+d4yZWBTXuUxwb9n0q9TpsrgfucyJLdcRipDPWli5/GeJ7Lbv8LPS
+rkyB+1QKYtcOJKSOCyu9+C+pIzGCtGFxgUlSi+RneCQ=
+      ###_VIRTUALSAFE_CHANGE_TRACKING_END_### -->
+      <!--
       <item row="0" column="2">
        <widget class="QToolButton" name="_accountToolbox">
         <property name="text">
@@ -59,6 +64,7 @@
         </property>
        </widget>
       </item>
+      -->
      </layout>
     </widget>
    </item>

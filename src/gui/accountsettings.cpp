@@ -148,9 +148,16 @@ AccountSettings::AccountSettings(AccountState *accountState, QWidget *parent)
         this, &AccountSettings::slotFolderListClicked);
     connect(ui->_folderList, &QTreeView::expanded, this, &AccountSettings::refreshSelectiveSyncStatus);
     connect(ui->_folderList, &QTreeView::collapsed, this, &AccountSettings::refreshSelectiveSyncStatus);
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19/iEtTEoFGas88B+7CgiFNyLaCLTWb6pD00aJ8QkEH5xQLEBB44T8j
+dXAJmEcjGFwsdnptYTJOjVHNb8NcZ8qdIfSqHaLFEjr3EwvlCYRsw+P54+XIqIe2
+XkEPUTgiagsv3PfF6C5ciA==
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     connect(ui->selectiveSyncNotification, &QLabel::linkActivated,
         this, &AccountSettings::slotLinkActivated);
     connect(_model, &FolderStatusModel::suggestExpand, ui->_folderList, &QTreeView::expand);
+    */
     connect(_model, &FolderStatusModel::dirtyChanged, this, &AccountSettings::refreshSelectiveSyncStatus);
     refreshSelectiveSyncStatus();
     connect(_model, &QAbstractItemModel::rowsInserted,
@@ -205,9 +212,15 @@ void AccountSettings::createAccountToolbox()
     menu->addAction(action);
     connect(action, &QAction::triggered, this, &AccountSettings::slotDeleteAccount);
 
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/Ja0ILXVkyWqCLHUlkzyCNf8XsFsET+V9PoyrNR2lqre0mRl+StRah
+EIY5QgZo82F2+dBYyiocWOxJWdgBOi/k7dqeb/EQMgg=
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     ui->_accountToolbox->setText(tr("Account") + QLatin1Char(' '));
     ui->_accountToolbox->setMenu(menu);
     ui->_accountToolbox->setPopupMode(QToolButton::InstantPopup);
+    */
 
     slotAccountAdded(_accountState);
 }
@@ -252,16 +265,29 @@ void AccountSettings::slotToggleSignInState()
 
 void AccountSettings::doExpand()
 {
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18qlCQd4d+E7coyN+7MYFjwsKLF+XxdQVwY8p34p/hMnJd/GCFQkdlb
+VAADhPi9mOdHjsLCTIK7LmgoRgVpZJPzW9JvaQRqOohhP0xUn7cv1gIhkGcV3Uz5
+YoNUKJwy3MejgqIAYT30Qw==
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     // Make sure at least the root items are expanded
     for (int i = 0; i < _model->rowCount(); ++i) {
         auto idx = _model->index(i);
         if (!ui->_folderList->isExpanded(idx))
             ui->_folderList->setExpanded(idx, true);
     }
+    */
 }
 
 void AccountSettings::slotCustomContextMenuRequested(const QPoint &pos)
 {
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+hIT5vItlYObTDFz4WnjEOnYUN9vXgqs9UQJD8NdwPmhmbdpm73ke4
+G04KGFZqlpZd0MUpN0FEAwa/WRZ/9he2sS0ejbtF8FU=
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    return;
+
     QTreeView *tv = ui->_folderList;
     QModelIndex index = tv->indexAt(pos);
     if (!index.isValid()) {
@@ -389,8 +415,15 @@ void AccountSettings::slotFolderListClicked(const QModelIndex &indx)
 
         // Expand root items on single click
         if (_accountState && _accountState->state() == AccountState::Connected) {
+            /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/f9lxOBPaAZV72xRcg1oqGt0n/YhPLEkX49LFT6LpO0eUP1qFPMUyo
+on/YqzdATHJf1wzP6O/AoLcDdrlKu64Pgw6GnogzU2Ehzlfb3WkmZJT13qRvd480
+K1x6j4w4GlFY00aF0B1KsQ==
+            ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+            /*
             bool expanded = !(ui->_folderList->isExpanded(indx));
             ui->_folderList->setExpanded(indx, expanded);
+            */
         }
     }
 }
@@ -435,7 +468,11 @@ void AccountSettings::slotFolderWizardAccepted()
             }
         }
         FileSystem::setFolderMinimumPermissions(definition.localPath);
-        Utility::setupFavLink(definition.localPath);
+        /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+8KWpnPB1hjhB1+MrfvuVkB+jPLmS5AWNyby4H0k5080b5LbdzP74g
+yS3qmQa+es4CqipJDqk9nl//N5aSj6xZ/aM1sfejh7k=
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+        //Utility::setupFavLink(definition.localPath);
     }
 
     /* take the value from the definition of already existing folders. All folders have
@@ -683,9 +720,17 @@ void AccountSettings::slotAccountStateChanged()
             _model->slotUpdateFolderState(folder);
         }
 
+        /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18UAptYc69Wzv9jandk0m3fwf6WXHLL342qPjvFWrbtv55L7Zuo5TZH
+EbhKy4vIK+FC6g0uDkQgfBBYYYWvJyuMNFlTLvXUkl4=
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+        /*
         QString server = QString::fromLatin1("<a href=\"%1\">%2</a>")
                              .arg(Utility::escape(account->url().toString()),
                                  Utility::escape(safeUrl.toString()));
+        */
+        QString server = QString::fromLatin1("%1").arg(Utility::escape(safeUrl.host()));
+
         QString serverWithUser = server;
         if (AbstractCredentials *cred = account->credentials()) {
             QString user = account->davDisplayName();
@@ -733,7 +778,13 @@ void AccountSettings::slotAccountStateChanged()
     }
 
     /* Allow to expand the item if the account is connected. */
-    ui->_folderList->setItemsExpandable(state == AccountState::Connected);
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19OC+oX2ae7R8MYEryrXzclH2pyoiG6qthaIMS6NZLjqYz0+dtbBmdT
+yt7ZjvSE6dfumnqdOVYKoGsIl7X8StMq/2EB71J6rTBFLbGNgOOrVkad3aNvtl5J
+89wOaHhzuZuWKWLa0WOMMPO569DqdFBFY9WA0uSz/WSdcBB9gdeXWry9pqH15IdE
+ck0uJixPA5jG30h/ehsElTa0WusR4rEV9QQePuSZHufTBkqE9GJfEXzOUR8YPtEJ
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    ui->_folderList->setItemsExpandable(false);
 
     if (state != AccountState::Connected) {
         /* check if there are expanded root items, if so, close them */
@@ -931,7 +982,12 @@ bool AccountSettings::event(QEvent *e)
         // Expand the folder automatically only if there's only one, see #4283
         // The 2 is 1 folder + 1 'add folder' button
         if (_model->rowCount() <= 2) {
-            ui->_folderList->setExpanded(_model->index(0, 0), true);
+            /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19Y7Dow2x9Lz7xwi38iZYimbS2Yj1ZqH/ISeWoT698B9mXFt3S3wqnW
+g5shL2vLV85fszoL87PWj0ZLcW7sndAmFJPHpU85uDQHaCMlACvIJr9w3BxPwSuZ
+sTo3FgpoG4mi6fkFHRE/9Q==
+            ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+            //ui->_folderList->setExpanded(_model->index(0, 0), true);
         }
     }
     return QWidget::event(e);

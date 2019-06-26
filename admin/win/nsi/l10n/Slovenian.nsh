@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Program za odstranjevanje namestitve zaht
 StrCpy $UAC_ERROR_LOGON_SERVICE "Storitev za prijavo ni zagnana. Opravilo je ustavljeno!"
 StrCpy $INIT_UNINSTALLER_RUNNING "Program za odstranjevanje namestitve je že zagnan."
 StrCpy $SectionGroup_Shortcuts "Bližnjice"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Prosimo zaklepanje obok za prepreèevanje korupcije podatkov. Kliknite Ponovi, èe ste to storili."

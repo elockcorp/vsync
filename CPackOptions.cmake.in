@@ -2,9 +2,24 @@
 # To pass variables to cpack from cmake, they must be configured
 # in this file.
 
+#[[ ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+AQk578/PtBKc0oype+CNmugHNshLSz2ukBQ7EHonbAZS51cxSAwp4
+K1PBNX/9GoNXFmbtoSjfSmCFFgcoKPM2ivNW2ZhbhkjsFjySQAoD12G7l8Lx7Kev
+LkrFzy/IuLWjB29cR8fRC0+qCBtzGvS2/ejnCba0faluoQK3Rs+ZzePkBb22ufbh
+SbT8kbFljgyJl4pIWfDuLyQ1cBkDWpKG+px6OqzuGFaorDkxPuqe/+ycfGmGveNi
+sKXjBBcgHPSMiACYgiTTZMbHQhSlcUY969MUlBnuHcIae/rJUOLpuBZ+TGC1nFQe
+zvYtCtBx/0REm/+/DDI7iF+bnEOnzYCbnle0B272oS2asNNFnBnqJGdFSmrvJQEi
+n05jkH1n0yQlbFAkxQTq0ikr21aBRvLb52h24FxH0NSClGmDi+dG4mIYe/DaHJcG
+5i4QscKqMOdb3y0R8mrdvSRotGcHrUr0eTKJp8DrOupgWfj10fBy6x889j7MeVR1
+YpBXs+wFKqtzLRP+154XHQw0gNoQOe8iHP+YatoCCQJ/RNDfoh8EA3ob/NZ+Ceo6
+a71gCJuJWVqFhgicjlysnnkpYO+2VEhSotAM6EPRQR5xL1iCCm72p9bO5IeegNV6
+bpxp7gPEG+J02XCG9q01Mz8mKHvPLo1as6CqU/1uscIYbrYLgnAjNbN6DkNG94IT
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### ]]
+
 if(CPACK_GENERATOR MATCHES "NSIS")
     SET( CPACK_PACKAGE_ICON  @CMAKE_SOURCE_DIR@/admin/win/nsi/installer.ico ) #  A branding image that will be displayed on the top bar inside the installer.    installer.bmp
-    SET( CPACK_NSIS_COMPRESSOR   "/SOLID lzma" ) # The arguments that will be passed to the NSIS SetCompressor command.    /SOLID lzma
+    #SET( CPACK_NSIS_COMPRESSOR   "/SOLID lzma" ) # The arguments that will be passed to the NSIS SetCompressor command.    /SOLID lzma
+    SET( CPACK_NSIS_COMPRESSOR   "bzip2" ) # The arguments that will be passed to the NSIS SetCompressor command.
 endif(CPACK_GENERATOR MATCHES "NSIS")
 
 set( CMAKE_SOURCE_DIR  @CMAKE_SOURCE_DIR@ )

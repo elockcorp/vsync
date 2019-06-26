@@ -98,7 +98,13 @@ if(NO_MSG_HANDLER)
 endif()
 
 # this option builds the shell integration
-option(BUILD_SHELL_INTEGRATION "BUILD_SHELL_INTEGRATION" ON)
+#[[ ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/sFq+RKPvPN0iKDLU3pIk0+RwzAY6jCOlJnTgmocUkmgD7/04KLy4x
+IJOZFd19rTnnnWFMZYNjpvKZ9lj+12Anpq4torMpSjkJhgwLfQpa+wU1FdaVRXR1
+SSHkl4GLp0TGgJ5HJMSVi4+twe4XFnlPsWJ0BCAd1lhkswN8Zs26KNvcNfce/zjy
+Nn/+1c3zBnPAvDwtMoLRmg==
+###_VIRTUALSAFE_CHANGE_TRACKING_END_### ]]
+option(BUILD_SHELL_INTEGRATION "BUILD_SHELL_INTEGRATION" OFF)
 
 # this option builds/installs the generic shell integration icons
 option(BUILD_SHELL_INTEGRATION_ICONS "BUILD_SHELL_INTEGRATION_ICONS" ON)

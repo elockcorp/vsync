@@ -460,7 +460,11 @@ void Application::slotownCloudWizardDone(int res)
             Utility::setLaunchOnStartup(_theme->appName(), _theme->appNameGUI(), true);
         }
 
-        _gui->slotShowSettings();
+        /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/FzV20Bu7kuw4Wnkw2oxtUyYPlG4SjmChW/yl8WfLHpOPZvEuT94KM
+fZzWrYMplUdaJs0GwEeMqJNLfFGsi9ybxgU7OqtTXuLwvk6kIE8Lfjnl02Fqvv7p
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+        //_gui->slotShowSettings();
     }
 }
 

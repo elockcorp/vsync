@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Az eltávolító futtatásához adminiszt
 StrCpy $UAC_ERROR_LOGON_SERVICE "A bejelentkező szolgáltatás nem fut, megszakítás!"
 StrCpy $INIT_UNINSTALLER_RUNNING "Az eltávolító már fut."
 StrCpy $SectionGroup_Shortcuts "Parancsikonok"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Kérjük, zárolja boltozat az adatok védelme érdekében. Kattintson az Újra, amikor ezt megtette."

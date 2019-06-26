@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Ten dezinstalator potrzebuje uprawnieñ ad
 StrCpy $UAC_ERROR_LOGON_SERVICE "Proces logowania nie jest uruchomiony, przerywam !"
 StrCpy $INIT_UNINSTALLER_RUNNING "Dezinstalator ju¿ jest uruchomiony."
 StrCpy $SectionGroup_Shortcuts "Skróty"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Proszê zablokowaæ skarbca, aby zapobiec uszkodzeniu danych. Kliknij Ponów kiedy to zrobisz."

@@ -43,14 +43,36 @@ Updater *Updater::instance()
 
 QUrl Updater::updateUrl()
 {
-    QUrl updateBaseUrl(QString::fromLocal8Bit(qgetenv("OCC_UPDATE_URL")));
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18jYIC3fp/k4nWPwofd+2TwwPJY9d0x3kumun/SrMaDBHmH605F6Bw5
+enlJsp3zPSPZ1QfeasLNFOSvEUfd6We1xczqkLoD/K68n1I6LSC/Moig4zeuZbOB
+QmwELco0UscbOV18C+G7HFczPHufOjd+FmzmAWI8zFPqsy6evEYnzMYm5qtl5lRQ
+VJ6BAS779WCBG1fnraJMQRyYa3TzamAC8WrLkEDaxASOGGKaNqz6mXz/eMi3Ax7I
+U5q1p8S/k0noq2nEoPlyuFZa5mulVReOvnOTRkDXVuzFgjkjvBcqqO9eJFmJyNrD
+fJRsuY7H9kbN1/+fX/q09ZT8NmZYpEf1xRTVnkE87BNQn8cjApRPF+QtaY5iN0iR
+0PqHI9kUkJWGBueHxFCSpV9/QenoExWaEm01GUMxZF3fNxQ2mbClPg6DPdAeAtNT
+iawiZEWrFXcpzM8W9WFZfajDNYCdSBimA8BnFeMPzno=
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    QString updateBaseUrl(QString::fromLocal8Bit(qgetenv("VSAFE_UPDATE_URL")));
     if (updateBaseUrl.isEmpty()) {
-        updateBaseUrl = QUrl(QLatin1String(APPLICATION_UPDATE_URL));
+        updateBaseUrl = QLatin1String(APPLICATION_UPDATE_URL);
     }
-    if (!updateBaseUrl.isValid() || updateBaseUrl.host() == ".") {
+    QUrl updateFinalUrl;
+#if defined(Q_OS_MAC)
+    updateFinalUrl = QUrl(updateBaseUrl + "mac.xml");
+#endif
+#if defined(Q_OS_WIN)
+    updateFinalUrl = QUrl(updateBaseUrl + "win.xml");
+#endif
+    if (!updateFinalUrl.isValid() || updateFinalUrl.host() == ".") {
         return QUrl();
     }
 
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19maqQn++wOU33tFH00RtY3dbpAVnnssMd8hzq69QQafk/iMFl1s3LB
+MtGyJMSh7SRhFFYcCGIG6aizfqdtW0NVSoLDwVfmVwQ=
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     auto urlQuery = getQueryParams();
 
 #if defined(Q_OS_MAC) && defined(HAVE_SPARKLE)
@@ -64,6 +86,9 @@ QUrl Updater::updateUrl()
     updateBaseUrl.setQuery(urlQuery);
 
     return updateBaseUrl;
+    */
+
+    return updateFinalUrl;
 }
 
 QUrlQuery Updater::getQueryParams()
@@ -127,6 +152,13 @@ Updater *Updater::create()
         return 0;
     }
 
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/QQNcXvfM1eLpj5o+MJNbsBYvjvoLRo3nBGzKvvFj0nltbsBEnvz+x
+H6EB1KD5yG5WPirAt86OIGKBuNQkyHcOkJj0IRzAeesO+sPIuplZofv4Ew1uPpvm
+pgNcbW9Ws0Eh9AzotAaIsrLTPM72Kge+eHYFRd6Dr640eFddNjn89GMLEyX9sMtn
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    return new NSISUpdater(url);
+    
 #if defined(Q_OS_MAC) && defined(HAVE_SPARKLE)
     return new SparkleUpdater(url);
 #elif defined(Q_OS_WIN32)

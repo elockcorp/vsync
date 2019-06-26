@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "T‰m‰ poisto-ohjelma vaatii yll‰pit‰j‰n oi
 StrCpy $UAC_ERROR_LOGON_SERVICE "Kirjautumispalvelu ei ole k‰ynniss‰, perutaan!"
 StrCpy $INIT_UNINSTALLER_RUNNING "Poisto-ohjelma on jo k‰ynniss‰."
 StrCpy $SectionGroup_Shortcuts "Pikakuvakkeet"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Ota lukko holvissa est‰‰ tietojen korruptiota. Valitse Uudelleen kun olet tehnyt niin."

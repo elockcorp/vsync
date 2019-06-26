@@ -122,9 +122,16 @@ void OwncloudAdvancedSetupPage::initializePage()
     _ui.lSelectiveSyncSizeLabel->setText(QString());
     _ui.lSyncEverythingSizeLabel->setText(QString());
 
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19vQ4HiTsKhV5wugc1TKGnYXV+YNKnQsdTqxxzq/PLByXXqJNVsg/uM
+luzcj7GfokNMjentGPOaIJmSnqckjmMPgbvn/qRGBg0=
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    /*
     // Update the local folder - this is not guaranteed to find a good one
     QString goodLocalFolder = FolderMan::instance()->findGoodPathForNewSyncFolder(localFolder(), serverUrl());
     wizard()->setProperty("localFolder", goodLocalFolder);
+    */
+    wizard()->setProperty("localFolder", localFolder());
 
     // call to init label
     updateStatus();
@@ -151,6 +158,17 @@ void OwncloudAdvancedSetupPage::initializePage()
     _ui.confCheckBoxSize->setChecked(newFolderLimit.first);
     _ui.confSpinBox->setValue(newFolderLimit.second);
     _ui.confCheckBoxExternal->setChecked(cfgFile.confirmExternalStorage());
+
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19UPtZvt/298gtOKgVlu1o1tXcd6lsoyRYrd00VXePLuAXEZIXBxUEj
+XtUhkWoRrQA8tYdbsEaGob4YOz5qX07/BDtVXqt4rP36EgOBeiuxgdQYeYfKREeM
+LRuBuZbF2RH2hr2csLFQjhlJzRZi/N618HS5eY2R09R5GFEEIfO/V8M3UhUAJem8
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    setCommitPage(true);
+    // Hack: setCommitPage() changes caption, but after an error this page could still be visible
+    setButtonText(QWizard::CommitButton, tr("&Next >"));
+    validatePage();
+    setVisible(false);
 }
 
 // Called if the user changes the user- or url field. Adjust the texts and

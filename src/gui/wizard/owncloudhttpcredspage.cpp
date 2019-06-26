@@ -110,10 +110,27 @@ void OwncloudHttpCredsPage::initializePage()
         }
         if (!password.isEmpty()) {
             _ui.lePassword->setText(password);
+
+            /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/6GY1qFwLbAQboo5oIpeVR6IgYpT3K/2DDyt3G/AR6WHemu2vWWUaq
+dJSpG2ykYszDuWPC8qCxGYweRko9x90FiF8tvriIjfjmvEAmZDfIXZEmqT3/myBP
+d5rNqjbQHqF9RK0v2FdDYw7FKife9eRdshBoYAymsbSQGqDGiCd1WREgTAb3Uqpu
+            ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+            setCommitPage(true);
+            // Hack: setCommitPage() changes caption, but after an error this page could still be visible
+            setButtonText(QWizard::CommitButton, tr("&Next >"));
+            validatePage();
+            setVisible(false);
         }
     }
     _ui.tokenLabel->setText(HttpCredentialsGui::requestAppPasswordText(ocWizard->account().data()));
-    _ui.tokenLabel->setVisible(!_ui.tokenLabel->text().isEmpty());
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX19+fGYLYpbnn0syL6hdKgOdK5EYmX+/fk6Vtj4DGU+BPL4IFKHX6qc0
+ruk6X5Tjo/F8tPhtlo+4S5jelfx0BYNtvz5NVbHa7mq2f4Ipu19/SGVOYKGjZUSU
+ofwuM8cre91+CK7SOd5S7NsT7jdW55ygHyIqGDHqgPMFnzF4yxkjBlaUkvcZnLPq
+wbPGYNx4WLgUudrfsRZMxedScAJbpJdO27oEzDRZkkAoQ2BHQIiN0qwXHdV0zNrm
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    _ui.tokenLabel->setVisible(false);
     _ui.leUsername->setFocus();
 }
 

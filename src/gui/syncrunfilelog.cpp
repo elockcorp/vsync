@@ -96,8 +96,13 @@ void SyncRunFileLog::start(const QString &folderPath)
     const qint64 logfileMaxSize = 10 * 1024 * 1024; // 10MiB
 
     // Note; this name is ignored in csync_exclude.c
-    const QString filename = folderPath + QLatin1String(".owncloudsync.log");
-
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/0xCGTLeA6d5wy391oGh5Et4aLaSbzaG+dPWlIr+hJS/Hpdd2giI1W
+yQEvRJqeEy2QbvjG0tvsZRLI5sz7m5LoggAB/HKuKLPjZwjxtkyDFYCcINIqja0c
+OKccIpfHNEDADn3UDJMnxQTniRA2+edOOhdgxbmZctvtEK4xULGrznh7J7Z30Kbf
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    const QString filename = folderPath + QLatin1String(".vsync.log");
+    
     // When the file is too big, just rename it to an old name.
     QFileInfo info(filename);
     bool exists = info.exists();

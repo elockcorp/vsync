@@ -463,7 +463,11 @@ void OwncloudSetupWizard::slotCreateLocalAndRemoteFolders(const QString &localFo
     bool nextStep = true;
     if (fi.exists()) {
         FileSystem::setFolderMinimumPermissions(localFolder);
-        Utility::setupFavLink(localFolder);
+        /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18J4aD00LRdlj2UTyqQMvTlU09i7UXz1jLGt348C3Ge6F9zkWIymRME
+wffmVJKpZE83RsuIu/7gnTZrKSwZtVghN8VnhhR21qI=
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+        //Utility::setupFavLink(localFolder);
         // there is an existing local folder. If its non empty, it can only be synced if the
         // ownCloud is newly created.
         _ocWizard->appendToConfigurationLog(
@@ -473,7 +477,11 @@ void OwncloudSetupWizard::slotCreateLocalAndRemoteFolders(const QString &localFo
         QString res = tr("Creating local sync folder %1...").arg(localFolder);
         if (fi.mkpath(localFolder)) {
             FileSystem::setFolderMinimumPermissions(localFolder);
-            Utility::setupFavLink(localFolder);
+            /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX194XUngXsW7T77fbvqs2Bos9r8ES1bwFT3XrDf22B30SleQGeIF8g72
+hRPMoJjyPIpgnP99gS4g1/gXV1Q0G880QY6nCAZIlRW6JJvLMeiv5Os2ibgGkh9I
+            ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+            //Utility::setupFavLink(localFolder);
             res += tr("ok");
         } else {
             res += tr("failed.");
@@ -583,6 +591,16 @@ void OwncloudSetupWizard::finalizeSetup(bool success)
                   .arg(Theme::instance()->appNameGUI())
             + QLatin1String("</b></font></p>"));
         _ocWizard->successfulStep();
+
+        /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1/4wnk+kgjDhhbjEUfmemhfiCBKfrMIulKQxmGNVzmrHLnqmN4D/Zon
+8uFHxqXfXrO5mecE9zSX4Bnu0PjCuOnjUOHnUWUKIHjel16DzKsLO6dmujaAgikn
+XpCU10dthw3lXRuni9520A==
+        ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+        QString path = QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + "/vsync.login";
+        QFile file (path);
+        if (file.exists())
+            file.remove();
     } else {
         // ### this is not quite true, pass in the real problem as optional parameter
         _ocWizard->appendToConfigurationLog(QLatin1String("<p><font color=\"red\">")

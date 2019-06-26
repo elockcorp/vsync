@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Bu kaldýrýcý yönetici eriþimi gerektiriyo
 StrCpy $UAC_ERROR_LOGON_SERVICE "Oturum açýlacak sunucu çalýþmadýðýndan iptal ediliyor!"
 StrCpy $INIT_UNINSTALLER_RUNNING "Kaldýrýcý zaten çalýþýyor."
 StrCpy $SectionGroup_Shortcuts "Kýsayollar"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "veri bozulmasýný önlemek için kasayý kilitleyin. Bunu yaptýktan zaman yeniden dene týklayýn."

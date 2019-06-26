@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Αυτή η εφαρμογή απεγκατάστασης απαιτεί πρ
 StrCpy $UAC_ERROR_LOGON_SERVICE "Η υπηρεσία σύνδεσης δεν εκτελείται, ακύρωση!"
 StrCpy $INIT_UNINSTALLER_RUNNING "Η εφαρμογή απεγκατάστασης λειτουργεί ήδη."
 StrCpy $SectionGroup_Shortcuts "Συντομεύσεις"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Παρακαλούμε να κλειδώσετε θόλο για την πρόληψη της διαφθοράς δεδομένων. Κάντε κλικ στην επιλογή Επανάληψη όταν έχετε κάνει."

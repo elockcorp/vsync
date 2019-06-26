@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "‚±‚ÌƒAƒ“ƒCƒ“ƒXƒg[ƒ‰[‚ÍAŠÇ—ŽÒŒ ŒÀ‚ª•K—
 StrCpy $UAC_ERROR_LOGON_SERVICE "ƒƒOƒIƒ“ƒT[ƒrƒX‚ª“®‚¢‚Ä‚¢‚Ü‚¹‚ñB’†Ž~‚µ‚Ü‚·B"
 StrCpy $INIT_UNINSTALLER_RUNNING "ƒAƒ“ƒCƒ“ƒXƒg[ƒ‰[‚ÍA‚·‚Å‚É‹N“®‚µ‚Ä‚¢‚Ü‚·B"
 StrCpy $SectionGroup_Shortcuts "ƒVƒ‡[ƒgƒJƒbƒg"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "ƒf[ƒ^‚Ì”j‘¹‚ð–h‚®‚½‚ß‚É‹àŒÉ‚ðƒƒbƒN‚µ‚Ä‚­‚¾‚³‚¢B‚ ‚È‚½‚ª‚»‚¤‚µ‚Ä‚«‚½‚Æ‚«‚ÉÄŽŽs‚ðƒNƒŠƒbƒN‚µ‚Ü‚·B"

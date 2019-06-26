@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Este desinstalador requer acesso de admin
 StrCpy $UAC_ERROR_LOGON_SERVICE "O serviço de logon não está sendo executado, abortando!"
 StrCpy $INIT_UNINSTALLER_RUNNING "O desinstalador já está em execução."
 StrCpy $SectionGroup_Shortcuts "Atalhos"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Por favor bloquear cofre para evitar a corrupção de dados. Clique em Repetir quando você tiver feito isso."

@@ -54,8 +54,15 @@ QString UpdateInfo::downloadUrl() const
 
 UpdateInfo UpdateInfo::parseElement(const QDomElement &element, bool *ok)
 {
-    if (element.tagName() != QLatin1String("owncloudclient")) {
-        qCCritical(lcUpdater) << "Expected 'owncloudclient', got '" << element.tagName() << "'.";
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX1+Tqvm6mAN0dlNcDrYC9c1+XL6hM9UJ1LwCUjMARlsVPTSsE/sDEe1I
+kz53+2e8ifWXj/ErJGed4gIz6BLeFXE+kr6KhdCmUQVFV1F6BTpIaS9JjjQie3By
+BJPUSDhCT5MTYYz3iynhc4wr6LIT+iMCm/N+LGCNZklOXLjbb27GOSrjKCy+EQo1
+CM/YyYVuKFNIV0w4ybtGZwVMRMuwwmKlwmlW3VN3qp5HYAyMNQHjaOVEnMLlwewu
+VgZtJhAwkGZTphh0mqSPlclzD5kkefqXolJYQdZsPMs=
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    if (element.tagName() != QLatin1String("vsafeclient")) {
+        qCCritical(lcUpdater) << "Expected 'vsafeclient', got '" << element.tagName() << "'.";
         if (ok)
             *ok = false;
         return UpdateInfo();
@@ -85,7 +92,12 @@ UpdateInfo UpdateInfo::parseElement(const QDomElement &element, bool *ok)
 
 void UpdateInfo::writeElement(QXmlStreamWriter &xml)
 {
-    xml.writeStartElement(QLatin1String("owncloudclient"));
+    /* ###_VIRTUALSAFE_CHANGE_TRACKING_START_###
+U2FsdGVkX18KRRaFyPi2kgt3HeS0RjD+BkMZD6bvEgf5Rt+gIFISqtzs1ScsvLU/
+FqyH2en9U0gKx0bFxgZ7LHSo9mddFAOk+Yc19ZBKWssXMQkOBt+8mKnkUHVM0mR2
+UWe5jrmtlZt7013yuiRq/AKkqYaJVLnvaFptf/cLOfY=
+    ###_VIRTUALSAFE_CHANGE_TRACKING_END_### */
+    xml.writeStartElement(QLatin1String("vsafeclient"));
     if (!version().isEmpty()) {
         xml.writeTextElement(QLatin1String("version"), version());
     }

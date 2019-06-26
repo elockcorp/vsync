@@ -41,3 +41,4 @@ StrCpy $UAC_UNINSTALLER_REQUIRE_ADMIN "Aquest desinstal·lador requereix accés 
 StrCpy $UAC_ERROR_LOGON_SERVICE "El servei de inici de sessió no s'està executant, s'està abortant!"
 StrCpy $INIT_UNINSTALLER_RUNNING "El desinstal·lador ja s'està executant."
 StrCpy $SectionGroup_Shortcuts "Dreceres"
+StrCpy $ConfirmVaultLock_MESSAGEBOX_TEXT "Si us plau, bloquejar volta per evitar la corrupció de dades. Premeu Reintenta quan ho ha fet."
